@@ -6,9 +6,12 @@ Policies can be specified using the [Group Policy templates on Windows](https://
 
 | Policy Name | Description
 | --- | --- |
-| **[`AppAutoUpdate`](#appautoupdate)** |  Enable or disable automatic application update.
+| **[`3rdparty`](#3rdparty)** | Set policies that WebExtensions can access via chrome.storage.managed.
+| **[`AllowedDomainsForApps`](#alloweddomainsforapps)** | Define domains allowed to access Google Workspace.
+| **[`AppAutoUpdate`](#appautoupdate)** | Enable or disable automatic application update.
 | **[`AppUpdateURL`](#appupdateurl)** | Change the URL for application update.
 | **[`Authentication`](#authentication)** | Configure sites that support integrated authentication.
+| **[`BackgroundAppUpdate`](#backgroundappupdate)** | Enable or disable automatic application update in the background, when the application is not running.
 | **[`BlockAboutAddons`](#blockaboutaddons)** | Block access to the Add-ons Manager (about:addons).
 | **[`BlockAboutConfig`](#blockaboutconfig)** | Block access to about:config.
 | **[`BlockAboutProfiles`](#blockaboutprofiles)** | Block access to About Profiles (about:profiles).
@@ -63,6 +66,7 @@ Policies can be specified using the [Group Policy templates on Windows](https://
 | **[`LegacyProfiles`](#legacyprofiles)** | Disable the feature enforcing a separate profile for each installation.
 | **[`LocalFileLinks`](#localfilelinks)** | Enable linking to local files by origin.
 | **[`ManagedBookmarks`](#managedbookmarks)** | Configures a list of bookmarks managed by an administrator that cannot be changed by the user.
+| **[`ManualAppUpdateOnly`](#manualappupdateonly)** | Allow manual updates only and do not notify the user about updates..
 | **[`PrimaryPassword`](#primarypassword)** | Require or prevent using a primary (formerly master) password.
 | **[`NetworkPrediction`](#networkprediction)** | Enable or disable network prediction (DNS prefetching).
 | **[`NewTabPage`](#newtabpage)** | Enable or disable the New Tab page.
@@ -91,11 +95,16 @@ Policies can be specified using the [Group Policy templates on Windows](https://
 | **[`SearchEngines -> Add`](#searchengines--add)** | Add new search engines.
 | **[`SearchSuggestEnabled`](#searchsuggestenabled)** | Enable search suggestions.
 | **[`SecurityDevices`](#securitydevices)** | Install PKCS #11 modules.
+| **[`ShowHomeButton`](#showhomebutton)** | Show the home button on the toolbar.
 | **[`SSLVersionMax`](#sslversionmax)** | Set and lock the maximum version of TLS.
 | **[`SSLVersionMin`](#sslversionmin)** | Set and lock the minimum version of TLS.
 | **[`SupportMenu`](#supportmenu)** | Add a menuitem to the help menu for specifying support information.
 | **[`UserMessaging`](#usermessaging)** | Don't show certain messages to the user.
 | **[`WebsiteFilter`](#websitefilter)** | Block websites from being visited.
+
+### 3rdparty
+
+Allow WebExtensions to configure policy. For more information, see [Adding policy support to your extension](https://extensionworkshop.com/documentation/enterprise/adding-policy-support-to-your-extension/).
 
 ### AppAutoUpdate
 
@@ -136,6 +145,47 @@ Value (string):
 {
   "policies": {
     "AppAutoUpdate": true | false
+  }
+}
+```
+### AllowedDomainsForApps
+
+Define domains allowed to access Google Workspace.
+
+This policy is based on the [Chrome policy](https://chromeenterprise.google/policies/#AllowedDomainsForApps) of the same name.
+
+If this policy is enabled, users can only access Google Workspace using accounts from the specified domains. If you want to allow Gmail, you can add ```consumer_accounts``` to the list.
+
+**Compatibility:** Firefox 89, Firefox ESR 78.11\
+**CCK2 Equivalent:** N/A\
+**Preferences Affected:** N/A
+
+#### Windows (GPO)
+```
+Software\Policies\Mozilla\Firefox\AllowedDomainsForApps = "managedfirefox.com,example.com"
+```
+#### Windows (Intune)
+OMA-URI:
+```
+./Device/Vendor/MSFT/Policy/Config/Firefox~Policy~firefox/AllowedDomainsForApps
+```
+Value (string):
+```
+<enabled/>
+<data id="AllowedDomainsForApps" value="managedfirefox.com,example.com"/>
+```
+#### macOS
+```
+<dict>
+  <key>AllowedDomainsForApps</key>
+  <string>managedfirefox.com,example.com</string>
+</dict>
+```
+#### policies.json
+```
+{
+  "policies": {
+    "AllowedDomainsForApps": "managedfirefox.com,example.com"
   }
 }
 ```
@@ -317,6 +367,48 @@ Value (string):
       "Locked": true | false,
       "PrivateBrowsing": true | false
     }
+  }
+}
+```
+### BackgroundAppUpdate
+
+Enable or disable **automatic** application update **in the background**, when the application is not running.
+
+If set to true, application updates may be installed (without user approval) in the background, even when the application is not running. The operating system might still require approval.
+
+If set to false, the application will not try to install updates when the application is not running.
+
+If you have disabled updates via `DisableAppUpdate` or disabled automatic updates via `AppUpdateAuto`, this policy has no effect.
+
+**Compatibility:** Firefox 90\
+**CCK2 Equivalent:** N/A\
+**Preferences Affected:** `app.update.background.enabled`
+
+#### Windows (GPO)
+```
+Software\Policies\Mozilla\Firefox\BackgroundAppUpdate = 0x1 | 0x0
+```
+#### Windows (Intune)
+OMA-URI:
+```
+./Device/Vendor/MSFT/Policy/Config/Firefox~Policy~firefox/BackgroundAppUpdate
+```
+Value (string):
+```
+<enabled/> or <disabled/>
+```
+#### macOS
+```
+<dict>
+  <key>BackgroundAppUpdate</key>
+  <true/> | <false/>
+</dict>
+```
+#### policies.json
+```
+{
+  "policies": {
+    "BackgroundAppUpdate": true | false
   }
 }
 ```
@@ -975,6 +1067,8 @@ Value (string):
 ```
 ### DisabledCiphers
 Disable specific cryptographic ciphers.
+
+**Preferences Affected:** `security.ssl3.dhe_rsa_aes_128_sha`, `security.ssl3.dhe_rsa_aes_256_sha`, `security.ssl3.ecdhe_ecdsa_aes_128_gcm_sha256`, `security.ssl3.ecdhe_rsa_aes_128_gcm_sha256`, `security.ssl3.ecdhe_rsa_aes_128_sha`, `security.ssl3.ecdhe_rsa_aes_256_sha`, `security.ssl3.rsa_aes_128_gcm_sha256`, `security.ssl3.rsa_aes_128_sha`, `security.ssl3.rsa_aes_256_gcm_sha384`, `security.ssl3.rsa_aes_256_sha`, `security.ssl3.rsa_des_ede3_sha`
 
 ---
 **Note:**
@@ -2102,6 +2196,7 @@ Value (string):
       "Fingerprinting": true | false,
       "Exceptions": ["https://example.com"]
     }
+  }
 }
 ```
 ### EncryptedMediaExtensions
@@ -2150,6 +2245,7 @@ Value (string):
       "Enabled": true | false,
       "Locked": true | false
     }
+  }
 }
 ```
 ### EnterprisePoliciesEnabled
@@ -2169,7 +2265,9 @@ Enable policy support on macOS.
 ### Extensions
 Control the installation, uninstallation and locking of extensions.
 
-`Install` is a list of URLs or native paths for extensions to be installed. 
+While this policy is not technically deprecated, it is recommended that you use the **[`ExtensionSettings`](#extensionsettings)** policy. It has the same functionality and adds more. It does not support native paths, though, so you'll have to use file:/// URLs.
+
+`Install` is a list of URLs or native paths for extensions to be installed.
 
 `Uninstall` is a list of extension IDs that should be uninstalled if found.
 
@@ -2263,11 +2361,12 @@ The configuration for each extension is another dictionary that can contain the 
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`blocked`| Blocks installation of the extension and removes it from the device if already installed.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`force_installed`| The extension is automatically installed and can't be removed by the user. This option is not valid for the default configuration and requires an install_url.
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`normal_installed`| The extension is automatically installed but can be disabled by the user. This option is not valid for the default configuration and requires an install_url.
-| `install_url`| Maps to a URL indicating where Firefox can download a force_installed or normal_installed extension. If installing from the addons.mozilla.org, use the following URL (substituting SHORT_NAME from the URL on AMO), https://addons.mozilla.org/firefox/downloads/latest/SHORT_NAME/latest.xpi. If installing from the local file system, use a file:/// URL. Languages packs are available from https://releases.mozilla.org/pub/firefox/releases/VERSION/PLATFORM/xpi/LANGUAGE.xpi. If you need to update the extension, you can change the name of the extension and it will be automatically updated. Extensions installed from file URLs will additional be updated when their internal version changes.
+| `install_url`| Maps to a URL indicating where Firefox can download a force_installed or normal_installed extension.  If installing from the local file system, use a [```file:///``` URL](https://en.wikipedia.org/wiki/File_URI_scheme). If installing from the addons.mozilla.org, use the following URL (substituting SHORT_NAME from the URL on AMO), https://addons.mozilla.org/firefox/downloads/latest/SHORT_NAME/latest.xpi. Languages packs are available from https://releases.mozilla.org/pub/firefox/releases/VERSION/PLATFORM/xpi/LANGUAGE.xpi. If you need to update the extension, you can change the name of the extension and it will be automatically updated. Extensions installed from file URLs will additional be updated when their internal version changes.
 | `install_sources` | A list of sources from which installing extensions is allowed. **This is unnecessary if you are only allowing the installation of certain extensions by ID.** Each item in this list is an extension-style match pattern. Users will be able to easily install items from any URL that matches an item in this list. Both the location of the *.xpi file and the page where the download is started from (i.e.  the referrer) must be allowed by these patterns. This setting can be used only for the default configuration.
 | `allowed_types` | This setting whitelists the allowed types of extension/apps that can be installed in Firefox. The value is a list of strings, each of which should be one of the following: "extension", "theme", "dictionary", "locale" This setting can be used only for the default configuration.
 | `blocked_install_message` | This maps to a string specifying the error message to display to users if they're blocked from installing an extension. This setting allows you to append text to the generic error message displayed when the extension is blocked. This could be be used to direct users to your help desk, explain why a particular extension is blocked, or something else. This setting can be used only for the default configuration.
 | `restricted_domains` | An array of domains on which content scripts can't be run. This setting can be used only for the default configuration.
+| `updates_disabled` | (Firefox 89, Firefox ESR 78.11) Boolean that indicates whether or not to disable automatic updates for an individual extension.
 
 **Compatibility:** Firefox 69, Firefox ESR 68.1 (As of Firefox 85, Firefox ESR 78.7, installing a theme makes it the default.)\
 **CCK2 Equivalent:** N/A\
@@ -2288,7 +2387,7 @@ Software\Policies\Mozilla\Firefox\ExtensionSettings (REG_MULTI_SZ) =
     "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi"
   },
   "https-everywhere@eff.org": {
-    "installation_mode": "allowed",
+    "installation_mode": "allowed"
   }
 }
 ```
@@ -2313,7 +2412,7 @@ Value (string):
     "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi"
   },
     "https-everywhere@eff.org": {
-    "installation_mode": "allowed",
+    "installation_mode": "allowed"
   }
 }'/>
 ```
@@ -3155,6 +3254,29 @@ Value (string):
   }
 }
 ```
+### ManualAppUpdateOnly
+
+Switch to manual updates only.
+
+If this policy is enabled:
+ 1. The user will never be prompted to install updates
+ 2. Firefox will not check for updates in the background, though it will check automatically when an update UI is displayed (such as the one in the About dialog). This check will be used to show "Update to version X" in the UI, but will not automatically download the update or prompt the user to update in any other way.
+ 3. The update UI will work as expected, unlike when using DisableAppUpdate.
+
+This policy is primarily intended for advanced end users, not for enterprises.
+
+**Compatibility:** Firefox 87\
+**CCK2 Equivalent:** N/A\
+**Preferences Affected:** N/A
+
+#### policies.json
+```
+{
+  "policies": {
+    "ManualAppUpdateOnly": true | false
+  }
+}
+```
 ### PrimaryPassword
 Require or prevent using a primary (formerly master) password.
 
@@ -3404,6 +3526,7 @@ Value (string):
 {
   "policies": {
     "OverrideFirstRunPage": "http://example.org"
+  }
 }
 ```
 ### OverridePostUpdatePage
@@ -3439,6 +3562,7 @@ Value (string):
 {
   "policies": {
     "OverridePostUpdatePage": "http://example.org"
+  }
 }
 ```
 ### PasswordManagerEnabled
@@ -3524,6 +3648,7 @@ Value (string):
       "Enabled": true | false,
       "EnablePermissions": true | false
     }
+  }
 }
 ```
 ### Permissions
@@ -3847,7 +3972,7 @@ Value (string):
   "policies": {
     "PictureInPicture": {
       "Enabled": true | false,
-      "Locked": true, false
+      "Locked": true | false
     }
   }
 }
@@ -3938,6 +4063,7 @@ Previously you could only set and lock a subset of preferences. Starting with Fi
 Preferences that start with the following prefixes are supported:
 ```
 accessibility.
+app.update.* (Firefox 86, Firefox 78.8)
 browser.
 datareporting.policy.
 dom.
@@ -3945,7 +4071,9 @@ extensions.
 general.autoScroll (Firefox 83, Firefox ESR 78.5)
 general.smoothScroll (Firefox 83, Firefox ESR 78.5)
 geo.
+gfx.
 intl.
+layers.
 layout.
 media.
 network.
@@ -3976,6 +4104,8 @@ as well as the following security preferences:
 | &nbsp;&nbsp;&nbsp;&nbsp;If false, SSL errors cannot be sent to Mozilla.
 | security.tls.hello_downgrade_check | boolean | true
 | &nbsp;&nbsp;&nbsp;&nbsp;If false, the TLS 1.3 downgrade check is disabled.
+| security.tls.version.enable-deprecated | boolean | false
+| &nbsp;&nbsp;&nbsp;&nbsp;If true, browser will accept TLS 1.0. and TLS 1.1 (Firefox 86, Firefox 78.8)
 | security.warn_submit_secure_to_insecure | boolean | true
 | &nbsp;&nbsp;&nbsp;&nbsp;If false, no warning is shown when submitting s form from https to http.
 &nbsp;
@@ -4185,7 +4315,7 @@ disabled
 | network.dns.disableIPv6 | boolean | Firefox 68, Firefox ESR 68 | false
 | &nbsp;&nbsp;&nbsp;&nbsp;If true, IPv6 DNS lokoups are disabled.
 | network.IDN_show_punycode | boolean | Firefox 68, Firefox ESR 68 | false
-| &nbsp;&nbsp;&nbsp;&nbsp;If true, display the punycode version of internationalized domain names. 
+| &nbsp;&nbsp;&nbsp;&nbsp;If true, display the punycode version of internationalized domain names.
 | places.history.enabled | boolean | Firefox 68, Firefox ESR 68 | true
 | &nbsp;&nbsp;&nbsp;&nbsp;If false, history is not enabled.
 | print.save_print_settings | boolean | Firefox 70, Firefox ESR 68.2 | true
@@ -4397,7 +4527,7 @@ Value (string):
       "SSLProxy": "hostname",
       "FTPProxy": "hostname",
       "SOCKSProxy": "hostname",
-      "SOCKSVersion": 4 | 5
+      "SOCKSVersion": 4 | 5,
       "Passthrough": "<local>",
       "AutoConfigURL": "URL_TO_AUTOCONFIG",
       "AutoLogin": true | false,
@@ -4989,6 +5119,43 @@ Value (string):
   }
 }
 ```
+### ShowHomeButton
+Show the home button on the toolbar.
+
+Future versions of Firefox will not show the home button by default.
+
+**Compatibility:** Firefox 88, Firefox ESR 78.10\
+**CCK2 Equivalent:** N/A\
+**Preferences Affected:** N/A
+
+#### Windows (GPO)
+```
+Software\Policies\Mozilla\Firefox\ShowHomeButton = 0x1 | 0x0
+```
+#### Windows (Intune)
+OMA-URI:
+```
+./Device/Vendor/MSFT/Policy/Config/Firefox~Policy~firefox/ShowHomeButton
+```
+Value (string):
+```
+<enabled/> or <disabled/>
+```
+#### macOS
+```
+<dict>
+  <key>ShowHomeButton</key>
+  <true/> | <false/>
+</dict>
+```
+#### policies.json
+```
+{
+  "policies": {
+    "ShowHomeButton": true | false
+  }
+}
+```
 ### SSLVersionMax
 
 Set and lock the maximum version of TLS.
@@ -5120,17 +5287,19 @@ Value (string):
 
 Prevent Firefox from messaging the user in certain situations.
 
-`WhatsNew` Remove the "What's New" icon and menuitem. (Firefox 75 only)
+`WhatsNew` Remove the "What's New" icon and menuitem.
 
-`ExtensionRecommendations` Don't recommend extensions while the user is visiting web pages.
+`ExtensionRecommendations` If false, don't recommend extensions while the user is visiting web pages.
 
-`FeatureRecommendations` Don't recommend browser features.
+`FeatureRecommendations` IF false, don't recommend browser features.
 
-`UrlbarInterventions` Don't offer Firefox specific suggestions in the URL bar. (Firefox 75 only)
+`UrlbarInterventions` If false, Don't offer Firefox specific suggestions in the URL bar.
+
+`SkipOnboarding` If true, don't show onboarding messages on the new tab page.
 
 **Compatibility:** Firefox 75, Firefox ESR 68.7\
 **CCK2 Equivalent:** N/A\
-**Preferences Affected:** `browser.messaging-system.whatsNewPanel.enabled`,`browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons`,`browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features`
+**Preferences Affected:** `browser.messaging-system.whatsNewPanel.enabled`,`browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons`,`browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features`,`browser.aboutwelcome.enabled`
 
 #### Windows (GPO)
 ```
@@ -5138,6 +5307,7 @@ Software\Policies\Mozilla\Firefox\UserMessaging\WhatsNew = 0x1 | 0x0
 Software\Policies\Mozilla\Firefox\UserMessaging\ExtensionRecommendations = 0x1 | 0x0
 Software\Policies\Mozilla\Firefox\UserMessaging\FeatureRecommendations = 0x1 | 0x0
 Software\Policies\Mozilla\Firefox\UserMessaging\UrlbarInterventions = 0x1 | 0x0
+Software\Policies\Mozilla\Firefox\UserMessaging\SkipOnboarding = 0x1 | 0x0
 ```
 #### Windows (Intune)
 OMA-URI:
@@ -5146,6 +5316,7 @@ OMA-URI:
 ./Device/Vendor/MSFT/Policy/Config/Firefox~Policy~firefox/UserMessaging_ExtensionRecommendations
 ./Device/Vendor/MSFT/Policy/Config/Firefox~Policy~firefox/UserMessaging_FeatureRecommendations
 ./Device/Vendor/MSFT/Policy/Config/Firefox~Policy~firefox/UserMessaging_UrlbarInterventions
+./Device/Vendor/MSFT/Policy/Config/Firefox~Policy~firefox/UserMessaging_SkipOnboarding
 ```
 Value (string):
 ```
@@ -5164,6 +5335,8 @@ Value (string):
     <true/> | <false/>
     <key>UrlbarInterventions</key>
     <true/> | <false/>
+    <key>SkipOnboarding</key>
+    <true/> | <false/>
   </dict>
 </dict>
 ```
@@ -5176,6 +5349,7 @@ Value (string):
       "ExtensionRecommendations": true | false,
       "FeatureRecommendations": true | false,
       "UrlbarInterventions": true | false
+      "SkipOnboarding": true | false
     }
   }
 }

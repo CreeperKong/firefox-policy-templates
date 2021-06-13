@@ -4,6 +4,8 @@
 <dict>
 	<key>EnterprisePoliciesEnabled</key>
 	<true/>
+	<key>AllowedDomainsForApps</key>
+	<string>managedfirefox.com,example.com</string>
 	<key>AppAutoUpdate</key>
 	<true/>
 	<key>AppUpdateURL</key>
@@ -569,6 +571,8 @@
 		<false/>
 		<key>UrlbarInterventions</key>
 		<false/>
+		<key>SkipOnboarding</key>
+		<true/>
 	</dict>
 	<key>WebsiteFilter</key>
 	<dict>
@@ -587,6 +591,8 @@
 		<key>NAME_OF_DEVICE</key>
 		<string>PATH_TO_LIBRARY_FOR_DEVICE</string>
 	</dict>
+	<key>ShowHomeButton</key>
+	<true/>
 	<key>SSLVersionMin</key>
 	<string>tls1.2</string>
 	<key>SSLVersionMax</key>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="2.7" schemaVersion="1.0" >
+<policyDefinitionResources revision="2.11" schemaVersion="1.0" >
   <displayName/>
   <description/>
   <resources >
@@ -37,6 +37,9 @@
       <string id="SUPPORTED_FF84">Firefox 84 oder höher, Firefox 78.6 ESR oder höher</string>
       <string id="SUPPORTED_FF85">Firefox 85 oder höher, Firefox 78.7 ESR oder höher</string>
       <string id="SUPPORTED_FF86">Firefox 86 oder höher, Firefox 78.8 ESR oder höher</string>
+      <string id="SUPPORTED_FF88">Firefox 88 oder höher, Firefox 78.10 ESR oder höher</string>
+      <string id="SUPPORTED_FF89">Firefox 89 oder höher, Firefox 78.11 ESR oder höher</string>
+      <string id="SUPPORTED_FF90">Firefox 90 oder höher, Firefox 78.12 ESR oder höher</string>
       <string id="firefox">Firefox</string>
       <string id="Permissions_group">Berechtigungen</string>
       <string id="Camera_group">Kamera</string>
@@ -630,6 +633,12 @@ Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird 
       <string id="Homepage">Startseite</string>
       <string id="PreviousSession">Letzte Sitzung</string>
       <string id="HomepageLocked">Homepage (Locked)</string>
+      <string id="Homepage_ShowHomeButton">Show Home button on toolbar</string>
+      <string id="Homepage_ShowHomeButton_Explain">If this policy is enabled, the home button will appear on the toolbar by default.
+
+If this policy is disabled, the home button will not appear on the toolbar by default.
+
+If this policy is not configured, Firefox will determine whether or not the home button appears on the toolbar by default.</string>
       <string id="PasswordManagerEnabled">Passwort-Manager</string>
       <string id="PasswordManagerEnabled_Explain">Wenn diese Richtlinieneinstellung deaktiviert ist, ist der Passwort-Manager nicht über die Einstellungen verfügbar.
 
@@ -762,6 +771,10 @@ Wenn diese Richtlinie aktiviert oder nicht konfiguriert ist, werden Firefox-Funk
       <string id="UserMessaging_UrlbarInterventions_Explain">Wenn diese Richtlinieneinstellung deaktiviert ist, werden  basierend darauf, was der Benutzer in die Adressleiste eingibt, keine Aktionen empfohlen.
 
 Wenn diese Richtlinieneinstellung aktiviert oder nicht konfiguriert ist, werden Aktionen empfohlen, die darauf basieren, was der Benutzer in die Adressleiste eingibt.</string>
+      <string id="UserMessaging_SkipOnboarding">Skip Onboarding</string>
+      <string id="UserMessaging_SkipOnboarding_Explain">If this policy is enabled, onboarding messages will not be shown on the new tab page.
+
+If this policy is disabled or not configured, onboarding messages will be shown on the new tab page.</string>
       <string id="DisabledCiphers_TLS_DHE_RSA_WITH_AES_128_CBC_SHA">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</string>
       <string id="DisabledCiphers_TLS_DHE_RSA_WITH_AES_256_CBC_SHA">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</string>
       <string id="DisabledCiphers_TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</string>
@@ -829,6 +842,10 @@ For detailed information on creating the policy, see https://github.com/mozilla/
 If this policy is disabled or not configured, managed bookmarks are not added.
 
 For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#managedbookmarks.</string>
+      <string id="AllowedDomainsForApps">Define domains allowed to access Google Workspace</string>
+      <string id="AllowedDomainsForApps_Explain">If this policy is enabled, users can only access Google Workspace for the specified domains (separated by a comma). To allow access to Gmail, you can add consumer_accounts.
+
+If this policy is disabled or not configured, users can access any account on Google Workspace as well as Gmail.</string>
       <string id="Preferences_Boolean_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, ist die Einstellung auf true gesperrt. Wenn diese Richtlinieneinstellung deaktiviert ist, ist die Einstellung auf false gesperrt.
 
 Für eine Beschreibung der Einstellung, siehe:
