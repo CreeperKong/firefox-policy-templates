@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="2.11" schemaVersion="1.0" >
+<policyDefinitionResources revision="5.9" schemaVersion="1.0">
   <displayName/>
   <description/>
-  <resources >
-    <stringTable >
+  <resources>
+    <stringTable>
       <string id="SUPPORTED_WINXPSP2">Microsoft Windows XP SP2 或更新版本</string>
       <string id="UNSUPPORTED">不再支援。</string>
       <string id="SUPPORTED_FF60">Firefox 60 或更新版本、Firefox 60 ESR 或更新版本</string>
@@ -40,6 +40,39 @@
       <string id="SUPPORTED_FF88">Firefox 88 或更新版本、Firefox 78.10 ESR 或更新版本</string>
       <string id="SUPPORTED_FF89">Firefox 89 或更新版本、Firefox 78.11 ESR 或更新版本</string>
       <string id="SUPPORTED_FF90">Firefox 90 或更新版本、Firefox 78.12 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF91">Firefox 91 或更新版本</string>
+      <string id="SUPPORTED_FF95">Firefox 95 或更新版本、Firefox 91.4 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF96">Firefox 96 或更新版本、Firefox 91.5 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF96_ONLY">Firefox 96 或更新版本</string>
+      <string id="SUPPORTED_FF97">Firefox 97 或更新版本、Firefox 91.6 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF98_ONLY">Firefox 98 或更新版本</string>
+      <string id="SUPPORTED_FF99">Firefox 99 或更新版本、Firefox 91.8 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF100">Firefox 100 或更新版本、Firefox 91.9 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF101">Firefox 101 或更新版本、Firefox 91.10 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF102">Firefox 102 或更新版本</string>
+      <string id="SUPPORTED_FF104">Firefox 104 或更新版本、Firefox 102.2 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF105">Firefox 105 或更新版本、Firefox 102.3 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF106">Firefox 106 或更新版本、Firefox 102.4 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF107">Firefox 107 或更新版本、Firefox 102.5 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF108">Firefox 108 或更新版本、Firefox 102.6 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF109">Firefox 109 或更新版本、Firefox 102.7 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF110">Firefox 110 或更新版本、Firefox 102.8 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF112_ONLY">Firefox 112 或更新版本</string>
+      <string id="SUPPORTED_FF113_ONLY">Firefox 113 或更新版本</string>
+      <string id="SUPPORTED_FF114">Firefox 114 或更新版本、Firefox 102.12 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF118">Firefox 118 或更新版本、Firefox 105.3 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF120">Firefox 120 或更新版本、Firefox 105.5 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF121">Firefox 121 或更新版本、Firefox 105.6 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF122">Firefox 122 或更新版本、Firefox 105.7 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF123">Firefox 123 或更新版本、Firefox 105.8 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF124">Firefox 124 或更新版本、Firefox 105.9 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF124_ONLY">Firefox 124 或更新版本</string>
+      <string id="SUPPORTED_FF125">Firefox 125 或更新版本、Firefox 105.10 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF126">Firefox 126 或更新版本、Firefox 105.11 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF127">Firefox 127 或更新版本、Firefox 105.12 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF128">Firefox 128 或更新版本、Firefox 105.13 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF129">Firefox 129 或更新版本、Firefox 105.14 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF130">Firefox 130 或更新版本、Firefox 105.15 ESR 或更新版本</string>
       <string id="firefox">Firefox</string>
       <string id="Permissions_group">權限</string>
       <string id="Camera_group">攝影機</string>
@@ -62,8 +95,11 @@
       <string id="UserMessaging_group">顯示給使用者的訊息</string>
       <string id="DisabledCiphers_group">停用加密演算法</string>
       <string id="EncryptedMediaExtensions_group">加密媒體擴充功能</string>
-      <string id="PDFjs_group">PDFjs</string>
+      <string id="PDFjs_group">PDF.js</string>
       <string id="PictureInPicture_group">子母畫面</string>
+      <string id="ProxySettings_group">Proxy Settings</string>
+      <string id="SecurityDevices_group">Security Devices</string>
+      <string id="FirefoxSuggest_group">Firefox Suggest (US only)</string>
       <string id="Allow">允許的網站</string>
       <string id="AllowSession">允許的網站（僅當次瀏覽階段）</string>
       <string id="Block">封鎖的網站</string>
@@ -112,7 +148,7 @@
 
 若停用或不設定此原則，就不會在隱私瀏覽模式進行整合身分驗證。</string>
       <string id="BlockAboutAddons">封鎖附加元件管理員</string>
-      <string id="BlockAboutAddons_Explain" >若啟用此原則，使用者將無法開啟附加元件管理員或 about:addons。
+      <string id="BlockAboutAddons_Explain">若啟用此原則，使用者將無法開啟附加元件管理員或 about:addons。
 
 若停用或不設定此原則，使用者則可以開啟附加元件管理員或 about:addons。</string>
       <string id="BlockAboutConfig">封鎖 about:config</string>
@@ -173,6 +209,10 @@
       <string id="DNSOverHTTPS_Explain">若啟用此原則，可變更預設 DNS over HTTPS 設定。
 
 若停用或不設定此原則，將使用預設 DNS Over HTTPS 設定。</string>
+      <string id="DNSOverHTTPS_Fallback">Fallback</string>
+      <string id="DNSOverHTTPS_Fallback_Explain">If this policy is disabled, Firefox will not fallback to your default DNS resolver if there is a problem with the secure DNS provider.
+
+If this policy is enabled or not configured, Firefox will use your default DNS resolver if there is a problem with the secure DNS provider.</string>
       <string id="DisableMasterPasswordCreation">停用設定主控密碼</string>
       <string id="DisableMasterPasswordCreation_Explain">若啟用此原則，將無法設定主控密碼。
 
@@ -263,10 +303,17 @@
 若停用或不設定此原則，則會收集並上傳 Telemetry 資料。
 
 Mozilla 建議您不要停用 Telemetry。透過 Telemetry 收集到的資訊可幫助為企業使用者打造更好的產品。</string>
-      <string id="DisplayBookmarksToolbar">顯示書籤工具列</string>
+      <string id="DisplayBookmarksToolbar">顯示書籤工具列（已棄用）</string>
       <string id="DisplayBookmarksToolbar_Explain">若啟用此原則，預設將顯示書籤工具列。使用者還是可以將其隱藏。
 
 若停用或不設定此原則，則預設不會顯示書籤工具列。</string>
+      <string id="DisplayBookmarksToolbar_Enum">Display Bookmarks Toolbar</string>
+      <string id="DisplayBookmarksToolbar_Enum_Explain">If this policy is enabled, the default bokmarks toolbar display can be configured.
+
+If this policy is disabled or not configured, the bookmarks toolbar is displayed on the new tab page by default.</string>
+      <string id="DisplayBookmarksToolbar_Always">Always</string>
+      <string id="DisplayBookmarksToolbar_Never">Never</string>
+      <string id="DisplayBookmarksToolbar_NewTab">New Tab</string>
       <string id="DisplayMenuBar">顯示選單列（已棄用）</string>
       <string id="DisplayMenuBar_Explain">若啟用此原則，預設將顯示選單列。使用者還是可以將其隱藏。
 
@@ -301,6 +348,7 @@ Mozilla 建議您不要停用 Telemetry。透過 Telemetry 收集到的資訊可
       <string id="ExtensionUpdate_Explain">若停用此原則，將不會自動更新擴充套件。
 
 若啟用或不設定此原則，將自動更新擴充套件。</string>
+      <string id="ExtensionSettingsOneLine">擴充套件管理（JSON on one line）</string>
       <string id="ExtensionSettings">擴充套件管理</string>
       <string id="ExtensionSettings_Explain">若啟用此原則，您可以用 JSON 檔案來描述擴充套件管理原則。
 
@@ -315,6 +363,14 @@ Mozilla 建議您不要停用 Telemetry。透過 Telemetry 收集到的資訊可
       <string id="LegacyProfiles_Explain">若啟用此原則，Firefox 將不會嘗試對本機電腦中不同套的 Firefox 建立不同的設定檔資料夾。也等於設定 MOZ_LEGACY_PROFILES。
 
 若停用或不設定此原則，Firefox 則會對每一套 Firefox 建立不同的設定檔。</string>
+      <string id="LegacySameSiteCookieBehaviorEnabled">退回舊版 SameSite 行為</string>
+      <string id="LegacySameSiteCookieBehaviorEnabled_Explain">若啟用此原則，Firefox 將退回舊版的 SameSite 行為。代表未明確指定 SameSite 屬性的 Cookie 將被視為 SameSite=None。
+
+若停用或不設定此原則，Firefox 則會強制視為 SameSite=lax。</string>
+      <string id="LegacySameSiteCookieBehaviorEnabledForDomainList">對特定網域退回舊版 SameSite 行為</string>
+      <string id="LegacySameSiteCookieBehaviorEnabledForDomainList_Explain">若啟用此原則，Firefox 將對特定網域退回舊版的 SameSite 行為。代表未明確指定 SameSite 屬性的 Cookie 將被視為 SameSite=None。
+
+若停用或不設定此原則，Firefox 則會強制對所有網域都視為 SameSite=lax。</string>
       <string id="LocalFileLinks">本機檔案鏈結</string>
       <string id="LocalFileLinks_Explain">若啟用此原則，將可以指定網站內容是否允許鏈結到本機檔案。
 
@@ -362,11 +418,11 @@ Mozilla 建議您不要停用 Telemetry。透過 Telemetry 收集到的資訊可
       <string id="Cookies_Block_Explain">若啟用此原則，將封鎖來自指定來源網址的 Cookie。若指定了頂級網域名稱（例如 http://example.org），也將封鎖所有來自子網域的 Cookie。
 
 若停用或不設定此原則，則預設不封鎖 Cookie。</string>
-      <string id="Cookies_Default">接受來自網站的 Cookie</string>
+      <string id="Cookies_Default">接受來自網站的 Cookie（已棄用）</string>
       <string id="Cookies_Default_Explain">若停用此原則，將預設不接受來自網站的 Cookie。
 
 若未啟用或設定此原則，則接受來自網站的 Cookie。</string>
-      <string id="Cookies_AcceptThirdParty">允許第三方 Cookie</string>
+      <string id="Cookies_AcceptThirdParty">允許第三方 Cookie（已棄用）</string>
       <string id="Cookies_AcceptThirdParty_Explain">若接受 Cookie 並啟用了此原則，將可以設定是否要接受第三方 Cookie。
 
 若停用或未設定此原則，或是不允許 Cookie，則忽略此設定。</string>
@@ -377,7 +433,7 @@ Mozilla 建議您不要停用 Telemetry。透過 Telemetry 收集到的資訊可
       <string id="Cookies_ExpireAtSessionEnd_Explain">若啟用此原則並允許 Cookie，Cookie 將在 Firefox 時失效。
 
 若停用或未設定此原則，或是不允許 Cookie，則忽略此設定。</string>
-      <string id="Cookies_RejectTracker">拒絕追蹤器</string>
+      <string id="Cookies_RejectTracker">拒絕追蹤器（已棄用）</string>
       <string id="Cookies_RejectTracker_Explain">若啟用此原則並允許 Cookie，Firefox 將預設拒絕追蹤器 Cookie。
 
 若停用或未設定此原則，或是不允許 Cookie，則忽略此設定。</string>
@@ -385,6 +441,20 @@ Mozilla 建議您不要停用 Telemetry。透過 Telemetry 收集到的資訊可
       <string id="Cookies_Locked_Explain">若啟用此原則，使用者將無法調整 Cookie 偏好設定。
 
 若停用或不設定此原則，則使用者能夠自行調整 Cookie 偏好設定。</string>
+      <string id="Cookies_Behavior">Cookie 行為</string>
+      <string id="Cookies_Behavior_Explain">若啟用此原則，可調整 Cookie 接受行為。
+
+若停用或不設定此原則，將拒絕來自已知追蹤器的 Cookie。</string>
+      <string id="Cookies_BehaviorPrivateBrowsing">隱私瀏覽模式中的 Cookie 行為</string>
+      <string id="Cookies_BehaviorPrivateBrowsing_Explain">若啟用此原則，可調整隱私瀏覽模式中的 Cookie 接受行為。
+
+若停用或不設定此原則，將在隱私瀏覽模式中拒絕來自已知追蹤器的 Cookie，並隔離所有第三方 cookie。</string>
+      <string id="Cookies_Behavior_Accept">接受所有 Cookie</string>
+      <string id="Cookies_Behavior_RejectForeign">拒絕第三方 Cookie</string>
+      <string id="Cookies_Behavior_Reject">拒絕所有 Cookie</string>
+      <string id="Cookies_Behavior_LimitForeign">拒絕來自您未造訪過的第三方 Cookie</string>
+      <string id="Cookies_Behavior_RejectTracker">拒絕來自已知追蹤器的 Cookie</string>
+      <string id="Cookies_Behavior_RejectTrackerAndPartitionForeign">拒絕來自已知追蹤器的 Cookie，並隔離第三方網站的 Cookie（全方位 Cookie 保護功能）</string>
       <string id="Camera_Allow_Explain">若啟用此原則，將允許指定來源網址存取攝影機。
 
 若停用或不設定此原則，則依循預設攝影機存取原則。</string>
@@ -556,6 +626,11 @@ Mozilla 建議您不要停用 Telemetry。透過 Telemetry 收集到的資訊可
       <string id="WebsiteFilter_Exceptions_Explain">若啟用此原則，且啟用了網站封鎖規則，將可以指定要排除封鎖的網站網址規則。規則格式文件位於 https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns。僅支援最多 1000 筆項目。
 
 若停用或不設定此原則，則不會放行任何例外網站。</string>
+      <string id="WebsiteFilterOneLine">Website Filter (JSON on one line)</string>
+      <string id="WebsiteFilter">Website Filter (JSON)</string>
+      <string id="WebsiteFilter_Explain">If this policy is enabled, you can specify blocked sites and exceptions via JSON.
+
+If this policy is disabled or not configured, websites are not filtered.</string>
       <string id="Bookmark01">書籤 01</string>
       <string id="Bookmark02">書籤 02</string>
       <string id="Bookmark03">書籤 03</string>
@@ -643,6 +718,10 @@ Mozilla 建議您不要停用 Telemetry。透過 Telemetry 收集到的資訊可
       <string id="PasswordManagerEnabled_Explain">若停用此原則，將無法於偏好設定中使用密碼管理員。
 
 若啟用或不設定此原則，則可於偏好設定中使用密碼管理員。</string>
+      <string id="PasswordManagerExceptions">Password Manager Exceptions</string>
+      <string id="PasswordManagerExceptions_Explain">If this policy is enabled, you can specify sites where Firefox won't offer to save passwords.
+
+If this policy is disabled or not configured, Firefox will offer to save passwords on all sites.</string>
       <string id="PromptForDownloadLocation">提示下載位置</string>
       <string id="PromptForDownloadLocation_Explain">若停用此原則，將不會向使用者詢問檔案下載位置。
 
@@ -696,6 +775,10 @@ Mozilla 建議您不要停用 Telemetry。透過 Telemetry 收集到的資訊可
       <string id="TrackingProtection_Locked_Explain">若啟用此原則，使用者將無法調整追蹤保護功能偏好設定。
 
 若停用或不設定此原則，使用者則可以調整追蹤保護功能偏好設定。</string>
+      <string id="TrackingProtection_EmailTracking">Email Tracking</string>
+      <string id="TrackingProtection_EmailTracking_Explain">If this policy is enabled, hidden email tracking pixels and scripts on websites are blocked.
+
+If this policy is disabled or not configured, hidden email tracking pixels and scripts on websites are not blocked.</string>
       <string id="RequestedLocales">請求語系</string>
       <string id="RequestedLocalesString">請求語系（字串）</string>
       <string id="RequestedLocales_Explain">若啟用此原則，您可以指定要由應用程式顯示的語系順序清單。將使得對應的語言套件生效。
@@ -705,6 +788,11 @@ Mozilla 建議您不要停用 Telemetry。透過 Telemetry 收集到的資訊可
       <string id="SecurityDevices_Explain">若啟用此原則，將可以指定要安裝的 PKCS #11 模組清單。需於設定中指定模組名稱及完整路徑。
 
 若停用或不設定此原則，則不會安裝其他的 PKCS #11 模組。</string>
+      <string id="SecurityDevices_Add">Add</string>
+      <string id="SecurityDevices_Delete">Delete</string>
+      <string id="SecurityDevices_Delete_Explain">If this policy is enabled, you can specify the names of PKCS #11 modules to be deleted.
+
+If this policy is disabled or not configured, no PKCS #11 modules will be deleted.</string>
       <string id="SearchBar">搜尋列位置</string>
       <string id="SearchBar_Explain">若啟用此原則，將可以設定搜尋列是否要自網址列分離。
 
@@ -742,7 +830,7 @@ Mozilla 建議您不要停用 Telemetry。透過 Telemetry 收集到的資訊可
       <string id="SSLVersionMin">啟用的最低 SSL 版本</string>
       <string id="SSLVersionMin_Explain">若啟用此原則，Firefox 將不會使用低於指定版本的 SSL/TLS 版本進行連線。
 
-若停用或不設定此原則，Firefox 的預設最低版本為 TLS 1.0。</string>
+若停用或不設定此原則，Firefox 的預設最低版本為 TLS 1.2。</string>
       <string id="SSLVersionMax">啟用的最高 SSL 版本</string>
       <string id="SSLVersionMax_Explain">若啟用此原則，將不會使用高於指定版本的 SSL/TLS 版本進行連線。
 
@@ -775,6 +863,14 @@ Mozilla 建議您不要停用 Telemetry。透過 Telemetry 收集到的資訊可
       <string id="UserMessaging_SkipOnboarding_Explain">若啟用此原則，將不會在「新分頁」頁面顯示新功能說明訊息。
 
 若停用或不設定此原則，則會在「新分頁」頁面顯示新功能說明訊息。</string>
+      <string id="UserMessaging_MoreFromMozilla">「Mozilla 的更多產品」頁面</string>
+      <string id="UserMessaging_MoreFromMozilla_Explain">若停用此原則，偏好設定中將不會顯示「Mozilla 的更多產品」頁面。
+
+若啟用或不設定此原則，將會在偏好設定中顯示「Mozilla 的更多產品」頁面。</string>
+      <string id="UserMessaging_Locked">Do not allow user messaging preferences to be changed</string>
+      <string id="UserMessaging_Locked_Explain">If this policy is disabled, user messaging preferences can be changed by the user.
+
+If this policy is enabled or not configured, user messaging preferences cannot be changed by the user.</string>
       <string id="DisabledCiphers_TLS_DHE_RSA_WITH_AES_128_CBC_SHA">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</string>
       <string id="DisabledCiphers_TLS_DHE_RSA_WITH_AES_256_CBC_SHA">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</string>
       <string id="DisabledCiphers_TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</string>
@@ -786,6 +882,12 @@ Mozilla 建議您不要停用 Telemetry。透過 Telemetry 收集到的資訊可
       <string id="DisabledCiphers_TLS_RSA_WITH_3DES_EDE_CBC_SHA">TLS_RSA_WITH_3DES_EDE_CBC_SHA</string>
       <string id="DisabledCiphers_TLS_RSA_WITH_AES_128_GCM_SHA256">TLS_RSA_WITH_AES_128_GCM_SHA256</string>
       <string id="DisabledCiphers_TLS_RSA_WITH_AES_256_GCM_SHA384">TLS_RSA_WITH_AES_256_GCM_SHA384</string>
+      <string id="DisabledCiphers_TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA</string>
+      <string id="DisabledCiphers_TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA</string>
+      <string id="DisabledCiphers_TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384">TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</string>
+      <string id="DisabledCiphers_TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256">TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</string>
+      <string id="DisabledCiphers_TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</string>
+      <string id="DisabledCiphers_TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256">TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</string>
       <string id="DisabledCiphers_Explain">若啟用此原則，將停用指定的加密套件組。
 
 若停用此原則，將只會開啟指定的加密套件組。
@@ -799,7 +901,7 @@ Mozilla 建議您不要停用 Telemetry。透過 Telemetry 收集到的資訊可
       <string id="EncryptedMediaExtensions_Locked_Explain">若啟用此原則且停用了 EncryptedMediaExtensions，Firefox 將不會下載加密媒體擴充功能（例如 Widevine），也不會詢問使用者是否要安裝。
 
 若停用或不設定此原則，此原則就不會生效。</string>
-      <string id="PDFjs_Enabled">啟用 PDFjs</string>
+      <string id="PDFjs_Enabled">啟用 PDF.js</string>
       <string id="PDFjs_Enabled_Explain">若停用此原則，將不會使用內建的 PDF 檢視器。
 
 若啟用或不設定此原則，就會使用內建的 PDF 檢視器。</string>
@@ -821,12 +923,14 @@ Mozilla 建議您不要停用 Telemetry。透過 Telemetry 收集到的資訊可
 若停用此原則，使用者將無法建立主控密碼。
 
 若不設定此原則，則使用者可自行決定是否要使用主控密碼功能。</string>
+      <string id="HandlersOneLine">應用程式處理方式（JSON on one line）</string>
       <string id="Handlers">應用程式處理方式</string>
       <string id="Handlers_Explain">若啟用此原則，您可以使用 JSON 檔案來設定預設應用程式處理方式。
 
 若停用或不設定此原則，則使用 Firefox 預設設定。
 
 若需要建立原則的詳細資訊，請參考 https://github.com/mozilla/policy-templates/blob/master/README.md#handlers。</string>
+      <string id="PreferencesOneLine">偏好設定（JSON on one line）</string>
       <string id="Preferences">偏好設定</string>
       <string id="Preferences_Explain">註：若要使用此原則，您必須先清除「偏好設定（已棄用）」區段當中的舊設定。
 
@@ -835,6 +939,18 @@ Mozilla 建議您不要停用 Telemetry。透過 Telemetry 收集到的資訊可
 若停用或不設定此原則，則不修改偏好設定。
 
 若需要建立原則的詳細資訊，請參考 https://github.com/mozilla/policy-templates/blob/master/README.md#preferences。</string>
+      <string id="BookmarksOneLine">書籤（JSON on one line）</string>
+      <string id="Bookmarks">書籤（JSON）</string>
+      <string id="Bookmarks_Explain">若啟用此原則，您可以使用 JSON 字串來設定書籤，也可以使用 [] 來清除所有書籤。
+
+若停用或不設定此原則，則不會指定書籤原則。
+
+若此原則與單一書籤一同啟用，則不會新增書籤。
+
+此原則不會影響「受管理的書籤」原則內容。
+
+若需要 JSON 書籤原則的詳細資訊，請參考 https://github.com/mozilla/policy-templates/blob/master/README.md#bookmarks。</string>
+      <string id="ManagedBookmarksOneLine">受管理的書籤（JSON on one line）</string>
       <string id="ManagedBookmarks">受管理的書籤</string>
       <string id="ManagedBookmarks_Explain">若啟用此原則，您可以使用 JSON 檔案來指定受管理的書籤。
 
@@ -845,6 +961,129 @@ Mozilla 建議您不要停用 Telemetry。透過 Telemetry 收集到的資訊可
       <string id="AllowedDomainsForApps_Explain">若啟用此原則，使用者將只能存取指定的 Google Workspace 網域（以半形逗號分隔）。若要允許存取 Gmail，可新增 consumer_accounts。
 
 若停用或不設定此原則，使用者則可存取任何 Google Workspace 帳號以及 Gmail。</string>
+      <string id="BackgroundAppUpdate">背景更新程式</string>
+      <string id="BackgroundAppUpdate_Explain">若停用此原則，應用程式將不會在未執行時嘗試安裝更新。
+
+若啟用或不設定此原則，應用程式就算未執行，也將不經過使用者同意，就在背景安裝更新。作業系統仍可能要求使用者同意此動作。</string>
+      <string id="AutoLaunchProtocolsFromOriginsOneLine">於指定來源網址自動啟動外部應用程式（JSON on one line）</string>
+      <string id="AutoLaunchProtocolsFromOrigins">於指定來源網址自動啟動外部應用程式</string>
+      <string id="AutoLaunchProtocolsFromOrigins_Explain">若啟用此原則，可列舉一組外部通訊協定的清單與來源網址，可不提示使用者就自動啟動外部通訊協定。
+
+若停用或不設定此原則，任何網站要觸發外部通訊協定前都會先詢問使用者是否同意。
+
+若需要建立原則的詳細資訊，請參考 https://github.com/mozilla/policy-templates/blob/master/README.md#autolaunchprotocolsfromorigins。</string>
+      <string id="WindowsSSO">Windows SSO 單一登入</string>
+      <string id="WindowsSSO_Explain">若啟用此原則，Firefox 將使用儲存於 Windows 的帳號密碼來登入微軟、工作單位、學校提供的帳號。
+
+若停用或不設定此原則，則必須手動輸入帳號密碼。</string>
+      <string id="UseSystemPrintDialog">Use System Print Dialog</string>
+      <string id="UseSystemPrintDialog_Explain">If this policy is enabled, Firefox will use the system print dialog instead of showing print preview before printing.
+
+If this policy is disabled or not configured, Firefox will show print preview before printing.</string>
+      <string id="ExemptDomainFileTypePairsFromFileTypeDownloadWarningsOneLine">Disable warnings based on file extension for specific file types on domains (JSON on one line)</string>
+      <string id="ExemptDomainFileTypePairsFromFileTypeDownloadWarnings">Disable warnings based on file extension for specific file types on domains</string>
+      <string id="ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Explain">If this policy is enabled, you can define a list of domains and file type extensions that will be exempt from executable warnings.
+
+If this policy is disabled or not configured, warnings are shown for all executable file types.
+
+For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#exemptdomainfiletypepairsfromfiletypedownloadwarnings.</string>
+      <string id="StartDownloadsInTempDirectory">Start Downloads in Temporary Directory</string>
+      <string id="StartDownloadsInTempDirectory_Explain">If this policy is enabled, Firefox will start downloads in a temporary directory and automatically deleted when you close the browser.
+
+If this policy is disabled or not configured, Firefox will to the download folder and will not be automatically deleted when you close the browser.</string>
+      <string id="GoToIntranetSiteForSingleWordEntryInAddressBar">Force direct intranet site navigation on single word entries in the address bar</string>
+      <string id="GoToIntranetSiteForSingleWordEntryInAddressBar_Explain">If this policy is enabled, typing single word entries in the address bar will attempt to navigate to intranet sites first, falling back to search if the DNS request fails.
+
+If this policy is disabled or not configured, typing single word entries in the address bar will search.</string>
+      <string id="AppUpdatePin">Pin updates to a specific version</string>
+      <string id="AppUpdatePin_Explain">If this policy is enabled, you can specify a Firefox version as xx. or xx.xx. and Firefox will not be updated beyond that major or minor version.
+
+If this policy is disabled or not configured, Firefox will update normally.</string>
+      <string id="Proxy_Locked">Do not allow proxy settings to be changed</string>
+      <string id="Proxy_Locked_Explain">If this policy is enabled, proxy settings cannot be changed by the user.
+
+If this policy is disabled or not configured, the user can change their proxy settings.</string>
+      <string id="Proxy_ConnectionType">Connection Type</string>
+      <string id="Proxy_ConnectionType_Explain">If this policy is enabled, you can set the connection type.
+
+If this policy is disabled or not configured, Firefox defaults to using the system proxy.</string>
+      <string id="Proxy_HTTPProxy">HTTP Proxy</string>
+      <string id="Proxy_HTTPProxy_Explain">If this policy is enabled, you can set the HTTP Proxy used when manual proxy configuration is specified.
+
+If this policy is disabled or not configured, Firefox does not use an HTTP Proxy.</string>
+      <string id="Proxy_UseHTTPProxyForAllProtocols">Use HTTP proxy for HTTPS</string>
+      <string id="Proxy_UseHTTPProxyForAllProtocols_Explain">If this policy is enabled, the HTTP Proxy is used for HTTPS when manual proxy configuration is specified.
+
+If this policy is disabled or not configured, Firefox does not use an HTTPS Proxy unless specified.</string>
+      <string id="Proxy_SSLProxy">HTTPS Proxy</string>
+      <string id="Proxy_SSLProxy_Explain">If this policy is enabled, you can set the HTTPS Proxy used when manual proxy configuration is specified.
+
+If this policy is disabled or not configured, Firefox does not use an HTTPS Proxy.</string>
+      <string id="Proxy_SOCKSProxy">SOCKS Host</string>
+      <string id="Proxy_SOCKSProxy_Explain">If this policy is enabled, you can set the SOCKS Host and version used when manual proxy configuration is specified.
+
+If this policy is disabled or not configured, Firefox does not use a SOCKS Host.</string>
+      <string id="Proxy_AutoConfigURL">Automatic proxy configuration URL</string>
+      <string id="Proxy_AutoConfigURL_Explain">If this policy is enabled, you can set the automatic proxy configuration URL.
+
+If this policy is disabled or not configured, Firefox does not use an automatic proxy configuration URL.</string>
+      <string id="Proxy_Passthrough">Proxy Passthrough</string>
+      <string id="Proxy_Passthrough_Explain">If this policy is enabled, the proxy settings are bypassed for the locations specified.
+
+If this policy is disabled or not configured, Firefox does not bypass the proxy.</string>
+      <string id="Proxy_AutoLogin">Do not prompt for authentication if password is saved</string>
+      <string id="Proxy_AutoLogin_Explain">If this policy is enabled, Firefox will not prompt for proxy authentication when a password is saved.
+
+If this policy is disabled or not configured, Firefox will always prompt for proxy authentication.</string>
+      <string id="Proxy_UseProxyForDNS">Proxy DNS when using SOCKS v5</string>
+      <string id="Proxy_UseProxyForDNS_Explain">If this policy is enabled, DNS is proxied when using SOCKS v5.
+
+If this policy is disabled or not configured, DNS is not proxied when using SOCKS v5.</string>
+      <string id="DisableThirdPartyModuleBlocking">Disable Third Party Module Blocking</string>
+      <string id="DisableThirdPartyModuleBlocking_Explain">If this policy is enabled, users are not allowed to block third-party modules from the about:third-party page.
+
+If this policy is disabled or not configured, users users are allowed to block third-party modules from the about:third-party page.</string>
+      <string id="ContainersOneLine">Containers (JSON on one line)</string>
+      <string id="Containers">Containers</string>
+      <string id="Containers_Explain">If this policy is enabled, you can use JSON to configure the default containers.
+
+If this policy is disabled or not configured, the built-in defaults are used.
+
+For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#containers.</string>
+      <string id="FirefoxSuggest_WebSuggestions">Suggestions from the web</string>
+      <string id="FirefoxSuggest_WebSuggestions_Explain">If this policy is enabled, you will get suggestions from Firefox related to your search.
+
+If this policy is disabled, you will not get these suggestions.
+
+If this policy is not configured, , you will get suggestions from Firefox related to your search.</string>
+      <string id="FirefoxSuggest_SponsoredSuggestions">Suggestions from sponsors</string>
+      <string id="FirefoxSuggest_SponsoredSuggestions_Explain">If this policy is enabled, you will support the development of Firefox with occasional sponsored suggestions.
+
+If this policy is disabled, you will not get these suggestions.
+
+If this policy is not configured, you will get occasional sponsored suggestions.</string>
+      <string id="FirefoxSuggest_ImproveSuggest">Improve the Firefox Suggest experience</string>
+      <string id="FirefoxSuggest_ImproveSuggest_Explain">If this policy is enabled, you will help create a richer search experience by allowing Mozilla to process your search queries.
+
+If this policy is disabled or not configured, you do not allow Mozilla to process your search queries.</string>
+      <string id="FirefoxSuggest_Locked">Do not allow preferences to be changed</string>
+      <string id="FirefoxSuggest_Locked_Explain">If this policy is enabled, Firefox Suggest preferences cannot be changed by the user.
+
+If this policy is disabled or not configured, the user can change their Firefox Suggest preferences.</string>
+      <string id="PrintingEnabled">Printing</string>
+      <string id="PrintingEnabled_Explain">If this policy is disabled, printing is disabled.
+
+If this policy is enabled or not configured, printing is enabled.</string>
+      <string id="ManualAppUpdateOnly">Manual Update Only</string>
+      <string id="ManualAppUpdateOnly_Explain">If this policy is enabled, users will not be prompted to install updates and Firefox will not check for updates in the background. The user must manually check and install updates from the About dialog.
+
+If this policy is disabled or not configured, the browser receives updates.
+
+This policy is not recommended for most users.</string>
+      <string id="AllowFileSelectionDialogs">Allow File Selection Dialogs</string>
+      <string id="AllowFileSelectionDialogs_Explain">If this policy is disabled, users will not be able to open file selection dialogs. In most cases, Firefox will act as if the user clicked the cancel button.
+
+If this policy is enabled or not configured, users can open file selection dialogs.</string>
       <string id="Preferences_Boolean_Explain">若啟用此原則，偏好設定將鎖定為 true。若停用此原則，偏好設定則鎖定為 false。
 
 若需要偏好設定的詳細說明，請參考：
@@ -953,6 +1192,12 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences。
       <presentation id="Cookies_AcceptThirdParty">
         <dropdownList refId="Cookies_AcceptThirdParty"/>
       </presentation>
+      <presentation id="Cookies_Behavior">
+        <dropdownList refId="Cookies_Behavior"/>
+      </presentation>
+      <presentation id="Cookies_BehaviorPrivateBrowsing">
+        <dropdownList refId="Cookies_BehaviorPrivateBrowsing"/>
+      </presentation>
       <presentation id="SearchBar">
         <dropdownList refId="SearchBar"/>
       </presentation>
@@ -960,7 +1205,7 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences。
         <checkBox refId="TrackingProtectionLocked">不允許調整追蹤保護偏好設定。</checkBox>
         <checkBox refId="Cryptomining">封鎖加密貨幣採礦程式。</checkBox>
         <checkBox refId="Fingerprinting">封鎖數位指紋追蹤程式。</checkBox>
-        <text>Exceptions:</text>
+        <text>例外：</text>
         <listBox refId="TrackingProtection_Exceptions"/>
       </presentation>
       <presentation id="TrackingProtection_Exceptions">
@@ -1028,6 +1273,9 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences。
         <textBox refId="SearchEngine_PostData">
           <label>POST 資料：</label>
         </textBox>
+        <textBox refId="SearchEngine_Encoding">
+          <label>字元編碼：</label>
+        </textBox>
       </presentation>
       <presentation id="SearchEngines_Default">
         <textBox refId="SearchEngines_Default">
@@ -1080,8 +1328,11 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences。
         <checkBox refId="DNSOverHTTPSEnabled">啟用 DNS over HTTPS。</checkBox>
         <checkBox refId="DNSOverHTTPSLocked">不允許變更 DNS over HTTPS 偏好設定。</checkBox>
       </presentation>
-      <presentation id="SSLVersion">
-        <dropdownList refId="SSLVersion"/>
+      <presentation id="SSLVersionMin">
+        <dropdownList refId="SSLVersion" defaultItem="2"/>
+      </presentation>
+      <presentation id="SSLVersionMax">
+        <dropdownList refId="SSLVersion" defaultItem="3"/>
       </presentation>
       <presentation id="SupportMenu">
         <text>標題：</text>
@@ -1108,6 +1359,9 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences。
       <presentation id="Preferences_security_default_personal_cert">
         <dropdownList refId="Preferences_security_default_personal_cert"/>
       </presentation>
+      <presentation id="LegacySameSiteCookieBehaviorEnabledForDomainList">
+        <listBox refId="LegacySameSiteCookieBehaviorEnabledForDomainList"/>
+      </presentation>
       <presentation id="LocalFileLinks">
         <listBox refId="LocalFileLinks"/>
       </presentation>
@@ -1124,8 +1378,10 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences。
       <presentation id="FirefoxHome">
         <checkBox refId="FirefoxHome_Search">搜尋</checkBox>
         <checkBox refId="FirefoxHome_TopSites">熱門網站</checkBox>
+        <checkBox refId="FirefoxHome_SponsoredTopSites">贊助的熱門網站</checkBox>
         <checkBox refId="FirefoxHome_Highlights">下載紀錄</checkBox>
         <checkBox refId="FirefoxHome_Pocket">Pocket 推薦項目</checkBox>
+        <checkBox refId="FirefoxHome_SponsoredPocket">Pocket 贊助內容</checkBox>
         <checkBox refId="FirefoxHome_Snippets">隻字片語</checkBox>
         <checkBox refId="FirefoxHome_Locked">不允許變更設定</checkBox>
       </presentation>
@@ -1137,6 +1393,9 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences。
       </presentation>
       <presentation id="DisplayMenuBar">
         <dropdownList refId="DisplayMenuBar"/>
+      </presentation>
+      <presentation id="DisplayBookmarksToolbar">
+        <dropdownList refId="DisplayBookmarksToolbar"/>
       </presentation>
       <presentation id="String">
         <textBox refId="String">
@@ -1151,6 +1410,45 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences。
       </presentation>
       <presentation id="JSON">
         <multiTextBox refId="JSON"/>
+      </presentation>
+      <presentation id="JSONOneLine">
+        <textBox refId="JSONOneLine">
+          <label/>
+        </textBox>
+      </presentation>
+      <presentation id="Proxy_ConnectionType">
+        <dropdownList refId="Proxy_ConnectionType"/>
+      </presentation>
+      <presentation id="Proxy_HTTPProxy">
+        <textBox refId="Proxy_HTTPProxy">
+          <label>Host including port:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Proxy_SSLProxy">
+        <textBox refId="Proxy_SSLProxy">
+          <label>Host including port:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Proxy_SOCKSProxy">
+        <text>Host including port:</text>
+        <textBox refId="Proxy_SOCKSProxy">
+          <label/>
+        </textBox>
+        <text>SOCKS Version:</text>
+        <dropdownList refId="Proxy_SOCKSVersion"/>
+      </presentation>
+      <presentation id="Proxy_AutoConfigURL">
+        <textBox refId="Proxy_AutoConfigURL">
+          <label>URL:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Proxy_Passthrough">
+        <text>No proxy for</text>
+        <textBox refId="Proxy_Passthrough">
+          <label/>
+        </textBox>
+        <text>Example: .mozilla.org, .net.nz, 192.168.1.0/24</text>
+        <text>Connections to localhost, 127.0.0.1/8, and ::1 are never proxied.</text>
       </presentation>
     </presentationTable>
   </resources>

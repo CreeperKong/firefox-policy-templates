@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="2.11" schemaVersion="1.0" >
+<policyDefinitionResources revision="5.9" schemaVersion="1.0">
   <displayName/>
   <description/>
-  <resources >
-    <stringTable >
+  <resources>
+    <stringTable>
       <string id="SUPPORTED_WINXPSP2">Microsoft Windows XP SP2 ou supérieur</string>
       <string id="UNSUPPORTED">No longer supported.</string>
       <string id="SUPPORTED_FF60">Firefox 60 ou supérieur, Firefox 60 ESR ou supérieur</string>
@@ -40,6 +40,39 @@
       <string id="SUPPORTED_FF88">Firefox 88 ou supérieur, Firefox 78.10 ESR ou supérieur</string>
       <string id="SUPPORTED_FF89">Firefox 89 ou supérieur, Firefox 78.11 ESR ou supérieur</string>
       <string id="SUPPORTED_FF90">Firefox 90 ou supérieur, Firefox 78.12 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF91">Firefox 91 ou supérieur</string>
+      <string id="SUPPORTED_FF95">Firefox 95 ou supérieur, Firefox 91.4 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF96">Firefox 96 ou supérieur, Firefox 91.5 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF96_ONLY">Firefox 96 ou supérieur</string>
+      <string id="SUPPORTED_FF97">Firefox 97 ou supérieur, Firefox 91.6 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF98_ONLY">Firefox 98 ou supérieur</string>
+      <string id="SUPPORTED_FF99">Firefox 99 ou supérieur, Firefox 91.8 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF100">Firefox 100 ou supérieur, Firefox 91.9 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF101">Firefox 101 ou supérieur, Firefox 91.10 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF102">Firefox 102 ou supérieur</string>
+      <string id="SUPPORTED_FF104">Firefox 104 ou supérieur, Firefox 102.2 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF105">Firefox 105 ou supérieur, Firefox 102.3 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF106">Firefox 106 ou supérieur, Firefox 102.4 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF107">Firefox 107 ou supérieur, Firefox 102.5 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF108">Firefox 108 ou supérieur, Firefox 102.6 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF109">Firefox 109 ou supérieur, Firefox 102.7 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF110">Firefox 110 ou supérieur, Firefox 102.8 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF112_ONLY">Firefox 112 ou supérieur</string>
+      <string id="SUPPORTED_FF113_ONLY">Firefox 113 ou supérieur</string>
+      <string id="SUPPORTED_FF114">Firefox 114 ou supérieur, Firefox 102.12 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF118">Firefox 118 ou supérieur, Firefox 115.3 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF120">Firefox 120 ou supérieur, Firefox 115.5 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF121">Firefox 121 ou supérieur, Firefox 115.6 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF122">Firefox 122 ou supérieur, Firefox 115.7 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF123">Firefox 123 ou supérieur, Firefox 115.8 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF124">Firefox 124 ou supérieur, Firefox 115.9 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF124_ONLY">Firefox 124 ou supérieur</string>
+      <string id="SUPPORTED_FF125">Firefox 125 ou supérieur, Firefox 115.10 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF126">Firefox 126 ou supérieur, Firefox 115.11 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF127">Firefox 127 ou supérieur, Firefox 115.12 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF128">Firefox 128 ou supérieur, Firefox 115.13 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF129">Firefox 129 ou supérieur, Firefox 115.14 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF130">Firefox 130 ou supérieur, Firefox 115.15 ESR ou supérieur</string>
       <string id="firefox">Firefox</string>
       <string id="Permissions_group">Permissions</string>
       <string id="Camera_group">Caméra</string>
@@ -62,8 +95,11 @@
       <string id="UserMessaging_group">User Messaging</string>
       <string id="DisabledCiphers_group">Disabled Ciphers</string>
       <string id="EncryptedMediaExtensions_group">Encrypted Media Extensions</string>
-      <string id="PDFjs_group">PDFjs</string>
+      <string id="PDFjs_group">PDF.js</string>
       <string id="PictureInPicture_group">Picture-in-Picture</string>
+      <string id="ProxySettings_group">Proxy Settings</string>
+      <string id="SecurityDevices_group">Security Devices</string>
+      <string id="FirefoxSuggest_group">Firefox Suggest (US only)</string>
       <string id="Allow">Sites autorisés</string>
       <string id="AllowSession">Sites autorisés (Session Only)</string>
       <string id="Block">Sites bloqués</string>
@@ -112,7 +148,7 @@ Si cette stratégie est activée ou non configurée, les préférences d'authent
 
 If this policy is disabled or not configured, integrated authentication is not used in private browsing.</string>
       <string id="BlockAboutAddons">Gestion de modules Add-ons </string>
-      <string id="BlockAboutAddons_Explain" >Si cette stratégie est activée, l'utilisateur ne peut pas accéder au gestionnaire de modules complémentaires ou aux modules add:.
+      <string id="BlockAboutAddons_Explain">Si cette stratégie est activée, l'utilisateur ne peut pas accéder au gestionnaire de modules complémentaires ou aux modules add:.
 
 Si cette stratégie est désactivée ou non configurée, l'utilisateur peut accéder au Gestionnaire de modules complémentaires et à about:addons.</string>
       <string id="BlockAboutConfig">Gestion about:config</string>
@@ -173,6 +209,10 @@ Si cette stratégie est désactivée ou n'est pas configurée, aucun domaine n'e
       <string id="DNSOverHTTPS_Explain">Si cette stratégie est activée, la configuration par défaut de DNS sur HTTPS peut être modifiée.
 
 Si cette stratégie est désactivée ou non configurée, DNS Over HTTPS utilise la configuration par défaut de Firefox.</string>
+      <string id="DNSOverHTTPS_Fallback">Fallback</string>
+      <string id="DNSOverHTTPS_Fallback_Explain">If this policy is disabled, Firefox will not fallback to your default DNS resolver if there is a problem with the secure DNS provider.
+
+If this policy is enabled or not configured, Firefox will use your default DNS resolver if there is a problem with the secure DNS provider.</string>
       <string id="DisableMasterPasswordCreation">Désactiver la création du mot de passe principal</string>
       <string id="DisableMasterPasswordCreation_Explain">Si cette stratégie est activée, les utilisateurs ne peuvent pas créer de mot de passe principal.
 
@@ -263,10 +303,17 @@ Si cette stratégie est désactivée ou non configurée, les modules complément
 Si cette stratégie est désactivée ou non configurée, la télémétrie est collectée et téléchargée.
 
 Mozilla vous recommande de ne pas désactiver la télémétrie. Les informations recueillies par télémétrie nous aident à créer un meilleur produit pour des entreprises comme la vôtre.</string>
-      <string id="DisplayBookmarksToolbar">Afficher la Barre d'outils des signets</string>
+      <string id="DisplayBookmarksToolbar">Afficher la Barre d'outils des signets (Deprecated)</string>
       <string id="DisplayBookmarksToolbar_Explain">Si cette stratégie est activée, la barre d'outils des signets est affichée par défaut. L'utilisateur peut toujours le cacher.
 
 Si cette stratégie est désactivée ou non configurée, la barre d’outils des signets ne s’affiche pas par défaut. </string>
+      <string id="DisplayBookmarksToolbar_Enum">Display Bookmarks Toolbar</string>
+      <string id="DisplayBookmarksToolbar_Enum_Explain">If this policy is enabled, the default bokmarks toolbar display can be configured.
+
+If this policy is disabled or not configured, the bookmarks toolbar is displayed on the new tab page by default.</string>
+      <string id="DisplayBookmarksToolbar_Always">Always</string>
+      <string id="DisplayBookmarksToolbar_Never">Never</string>
+      <string id="DisplayBookmarksToolbar_NewTab">New Tab</string>
       <string id="DisplayMenuBar">Afficher la Barre de menus (Deprecated)</string>
       <string id="DisplayMenuBar_Explain">Si cette stratégie est activée, la barre de menus est affichée par défaut. L'utilisateur peut toujours le cacher.
 
@@ -301,6 +348,7 @@ Si cette stratégie est désactivée ou non configurée, aucune extension n'est 
       <string id="ExtensionUpdate_Explain">Si cette stratégie est désactivée, les extensions ne seront pas mise à jour automatiquement.
 
 Si cette stratégie est activée ou non configurée, les extensions seront mise à jour automatiquement.</string>
+      <string id="ExtensionSettingsOneLine">Gestion des extensions (JSON on one line)</string>
       <string id="ExtensionSettings">Gestion des extensions</string>
       <string id="ExtensionSettings_Explain">Si cette stratégie est activée, vous pouvez utiliser JSON pour définir la stratégie de gestion des extensions.
 
@@ -315,6 +363,14 @@ Si cette stratégie est activée ou non configurée, l'accélération matériell
       <string id="LegacyProfiles_Explain">Si cette stratégie est activée, Firefox n'essaiera pas de créer des profils différents pour les installations de Firefox dans différents répertoires. C'est l'équivalent de la variable d'environnement MOZ_LEGACY_PROFILES.
 
 Si cette stratégie est désactivée ou non configurée, Firefox créera un nouveau profil pour chaque installation unique de Firefox.</string>
+      <string id="LegacySameSiteCookieBehaviorEnabled">Revert to legacy SameSite behavior</string>
+      <string id="LegacySameSiteCookieBehaviorEnabled_Explain">If this policy is enabled, Firefox will revert to the legacy behavior of SameSite. This means that cookies that don't explicitly specify a SameSite attribute are treated as if they were SameSite=None.
+
+If this policy is disabled or not configured, Firefox will enforce SameSite=lax.</string>
+      <string id="LegacySameSiteCookieBehaviorEnabledForDomainList">Revert to legacy SameSite behavior on specific domains</string>
+      <string id="LegacySameSiteCookieBehaviorEnabledForDomainList_Explain">If this policy is enabled, Firefox will revert to the legacy behavior of SameSite for the specified domains. This means that cookies that don't explicitly specify a SameSite attribute are treated as if they were SameSite=None.
+
+If this policy is disabled or not configured, Firefox will enforce SameSite=lax for all domains.</string>
       <string id="LocalFileLinks">Liens de fichiers locaux</string>
       <string id="LocalFileLinks_Explain">Si cette stratégie est activée, vous pouvez spécifier les origines où la liaison à des fichiers locaux est autorisée.
 
@@ -340,10 +396,10 @@ Dans les deux cas, l'utilisateur pourra modifier la valeur (elle n'est pas verro
       <string id="PopupBlocking_Allow_Explain">Si cette stratégie est activée, les fenêtres contextuelles sont toujours autorisées pour les origines indiquées. Si un domaine de premier niveau est spécifié (http://example.org), les fenêtres contextuelles sont également autorisées pour tous les sous-domaines.
 
 Si cette stratégie est désactivée ou non configurée, la stratégie par défaut des fenêtres contextuelles est suivie.</string>
-      <string id="PopupBlocking_Default">Autoriser les fenêtres publicitaires intempestives à partir de sites Web</string>
-      <string id="PopupBlocking_Default_Explain">Si cette stratégie est désactivée, les fenêtres contextuelles sont autorisées à partir des sites Web par défaut.
+      <string id="PopupBlocking_Default">Bloquer les pop-ups des sites Web</string>
+      <string id="PopupBlocking_Default_Explain">Si cette stratégie est désactivée, les pop-ups sont autorisées à partir des sites Web.
 
-Si cette stratégie n'est ni configurée ni activée, les fenêtres contextuelles ne sont pas autorisées à partir de sites Web.</string>
+Si cette stratégie est non configurée ou activée, les pop-ups ne sont pas autorisées à partir de sites Web.</string>
       <string id="PopupBlocking_Locked">Ne pas autoriser la modification des préférences</string>
       <string id="PopupBlocking_Locked_Explain">Si cette stratégie est activée, les préférences en incrustation ne peuvent pas être modifiées par l'utilisateur.
 
@@ -364,11 +420,11 @@ If this policy is disabled or not configured, the default cookie policy is follo
       <string id="Cookies_Block_Explain">Si cette stratégie est activée, les cookies sont bloqués pour les origines indiquées. Si un domaine de premier niveau est spécifié (http://example.org), les cookies sont également bloqués pour tous les sous-domaines.
 
 Si cette stratégie est désactivée ou non configurée, les cookies ne sont pas bloqués par défaut.</string>
-      <string id="Cookies_Default">Accepter les cookies des sites Web</string>
+      <string id="Cookies_Default">Accepter les cookies des sites Web (Deprecated)</string>
       <string id="Cookies_Default_Explain">Si cette stratégie est désactivée, les cookies des sites Web ne sont pas acceptés par défaut.
 
 Si cette stratégie n'est ni configurée ni activée, les cookies des sites Web sont acceptés.</string>
-      <string id="Cookies_AcceptThirdParty">Accepter les cookies tiers</string>
+      <string id="Cookies_AcceptThirdParty">Accepter les cookies tiers (Deprecated)</string>
       <string id="Cookies_AcceptThirdParty_Explain">Si cette stratégie est activée et que les cookies sont autorisés, vous pouvez définir quand accepter les cookies tiers.
 
 Ce paramètre est ignoré si cette stratégie est désactivée ou non configurée ou si les cookies ne sont pas autorisés.</string>
@@ -379,7 +435,7 @@ Ce paramètre est ignoré si cette stratégie est désactivée ou non configuré
       <string id="Cookies_ExpireAtSessionEnd_Explain">Si cette stratégie est activée et que les cookies sont autorisés, ils expireront à la fermeture de Firefox.
 
 Ce paramètre est ignoré si cette stratégie est désactivée ou non configurée ou si les cookies ne sont pas autorisés.</string>
-      <string id="Cookies_RejectTracker">Rejet des cookies de suivi</string>
+      <string id="Cookies_RejectTracker">Rejet des cookies de suivi (Deprecated)</string>
       <string id="Cookies_RejectTracker_Explain">Si cette stratégie est activée et que les cookies sont autorisés, Firefox rejettera les cookies de suivi par défaut.
 
 Ce paramètre est ignoré si cette stratégie est désactivée ou non configurée ou si les cookies ne sont pas autorisés..</string>
@@ -387,6 +443,20 @@ Ce paramètre est ignoré si cette stratégie est désactivée ou non configuré
       <string id="Cookies_Locked_Explain">Si cette stratégie est activée, les préférences en matière de cookies ne peuvent pas être modifiées par l'utilisateur.
 
 Si cette stratégie est désactivée ou non configurée, l'utilisateur peut modifier ses préférences en matière de cookies.</string>
+      <string id="Cookies_Behavior">Cookie Behavior</string>
+      <string id="Cookies_Behavior_Explain">If this policy is enabled, you can configure cookie behavior.
+
+If this policy is not configured or disabled, cookies are rejected for known trackers.</string>
+      <string id="Cookies_BehaviorPrivateBrowsing">Cookie Behavior in private browsing</string>
+      <string id="Cookies_BehaviorPrivateBrowsing_Explain">If this policy is enabled, you can configure cookie behavior in private browsing.
+
+If this policy is not configured or disabled, in private browsing, cookies are rejected for known trackers and third-party cookies are partitioned.</string>
+      <string id="Cookies_Behavior_Accept">Accept all cookies</string>
+      <string id="Cookies_Behavior_RejectForeign">Reject third party cookies</string>
+      <string id="Cookies_Behavior_Reject">Reject all cookies</string>
+      <string id="Cookies_Behavior_LimitForeign">Reject third party cookies for sites you haven't visited</string>
+      <string id="Cookies_Behavior_RejectTracker">Reject cookies for known trackers</string>
+      <string id="Cookies_Behavior_RejectTrackerAndPartitionForeign">Reject cookies for known trackers and partition third-party cookies (Total Cookie Protection)</string>
       <string id="Camera_Allow_Explain">Si cette stratégie est activée, l'accès à la caméra est toujours autorisé pour les origines indiquées.
 
 Si cette stratégie est désactivée ou non configurée, la stratégie par défaut de la caméra est appliquée.</string>
@@ -557,6 +627,11 @@ Si cette stratégie est désactivée ou non configurée, aucun site Web n'est bl
       <string id="WebsiteFilter_Exceptions_Explain">Si cette stratégie est activée et que le filtre de site Web est activé, vous pouvez spécifier des modèles de correspondance pour les sites que vous ne souhaitez pas bloquer. Les modèles de correspondance sont documentés sur https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns. Il y a une limite de 1000 entrées.
 
 Si cette stratégie est désactivée ou non configurée, il n'y a pas d'exception au filtre de site Web..</string>
+      <string id="WebsiteFilterOneLine">Website Filter (JSON on one line)</string>
+      <string id="WebsiteFilter">Website Filter (JSON)</string>
+      <string id="WebsiteFilter_Explain">If this policy is enabled, you can specify blocked sites and exceptions via JSON.
+
+If this policy is disabled or not configured, websites are not filtered.</string>
       <string id="Bookmark01">Signet 01</string>
       <string id="Bookmark02">Signet 02</string>
       <string id="Bookmark03">Signet 03</string>
@@ -644,6 +719,10 @@ If this policy is not configured, Firefox will determine whether or not the home
       <string id="PasswordManagerEnabled_Explain">Si cette stratégie est désactivée, le gestionnaire de mots de passe n'est pas disponible via les préférences.
 
 Si cette stratégie est activée ou non configurée, le gestionnaire de mots de passe est disponible via les préférences.</string>
+      <string id="PasswordManagerExceptions">Password Manager Exceptions</string>
+      <string id="PasswordManagerExceptions_Explain">If this policy is enabled, you can specify sites where Firefox won't offer to save passwords.
+
+If this policy is disabled or not configured, Firefox will offer to save passwords on all sites.</string>
       <string id="PromptForDownloadLocation">Demander l'emplacement de téléchargement</string>
       <string id="PromptForDownloadLocation_Explain">Si cette stratégie est désactivée, l'utilisateur n'est pas invité à indiquer un emplacement de téléchargement.
 
@@ -683,7 +762,7 @@ Si cette stratégie est désactivée, la protection contre le suivi est désacti
 Si cette stratégie n'est pas configurée, une protection de suivi standard est utilisée et l'utilisateur peut la modifier.</string>
       <string id="TrackingProtection_Cryptomining">minage de cryptomonnaie</string>
       <string id="TrackingProtection_Cryptomining_Explain">Si cette stratégie est activée, les scripts qui utilisent le minage cryptographique sont bloqués.
-        
+
 Si cette stratégie est désactivée ou n'est pas configurée, les scripts qui utilisent le minage cryptographique ne sont pas bloqués.</string>
       <string id="TrackingProtection_Fingerprinting">Empreinte digitale</string>
       <string id="TrackingProtection_Fingerprinting_Explain">Si cette stratégie est activée, les scripts qui utilisent l'empreinte digitale sont bloqués.
@@ -697,6 +776,10 @@ Si cette stratégie est désactivée ou n'est pas configurée, la protection con
       <string id="TrackingProtection_Locked_Explain">Si cette politique est activée, les préférences de protection du suivi ne peuvent pas être modifiées par l'utilisateur.
 
 Si cette stratégie est désactivée ou n'est pas configurée, l'utilisateur peut modifier les préférences de protection du suivi.</string>
+      <string id="TrackingProtection_EmailTracking">Email Tracking</string>
+      <string id="TrackingProtection_EmailTracking_Explain">If this policy is enabled, hidden email tracking pixels and scripts on websites are blocked.
+
+If this policy is disabled or not configured, hidden email tracking pixels and scripts on websites are not blocked.</string>
       <string id="RequestedLocales">liste des paramètres régionaux</string>
       <string id="RequestedLocalesString">liste des paramètres régionaux (string)</string>
       <string id="RequestedLocales_Explain">Si cette stratégie est activée, vous pouvez spécifier une liste des paramètres régionaux demandés pour l'application par ordre de préférence. Le module linguistique correspondant deviendra actif.
@@ -706,6 +789,11 @@ Si cette stratégie est désactivée ou non configurée, l'application utilisera
       <string id="SecurityDevices_Explain">Si cette stratégie est activée, vous pouvez spécifier une liste de modules PKCS#11 à installer. Les modules sont spécifiés sous la forme d'un nom et d'un chemin complet.
 
 Si cette stratégie est désactivée ou non configurée, aucun module PKCS#11 supplémentaire ne sera installé..</string>
+      <string id="SecurityDevices_Add">Add</string>
+      <string id="SecurityDevices_Delete">Delete</string>
+      <string id="SecurityDevices_Delete_Explain">If this policy is enabled, you can specify the names of PKCS #11 modules to be deleted.
+
+If this policy is disabled or not configured, no PKCS #11 modules will be deleted.</string>
       <string id="SearchBar">Emplacement de la barre de recherche</string>
       <string id="SearchBar_Explain">Si cette stratégie est activée, vous pouvez définir si la barre de recherche est distincte de la barre d'URL.
 
@@ -743,7 +831,7 @@ Si cette stratégie n'est pas configurée, les suggestions de recherche seront a
       <string id="SSLVersionMin">Version SSL minimum utilisée</string>
       <string id="SSLVersionMin_Explain">Si cette stratégie est activée, Firefox n'utilisera pas les versions SSL / TLS inférieures à la valeur spécifiée.
 
-Si cette stratégie est désactivée ou non configurée, Firefox utilise par défaut TLS 1.0.</string>
+Si cette stratégie est désactivée ou non configurée, Firefox utilise par défaut TLS 1.2.</string>
       <string id="SSLVersionMax">Version SSL maximum utilisée</string>
       <string id="SSLVersionMax_Explain">Si cette stratégie est activée, Firefox n'utilisera pas les versions SSL / TLS supérieures à la valeur spécifiée.
 
@@ -758,7 +846,7 @@ Si cette stratégie est désactivée ou non configurée, Firefox utilise par dé
 Si cette stratégie est désactivée ou n'est pas configurée, aucun item n'est ajouté au menu d'aide.</string>
       <string id="UserMessaging_WhatsNew">Quoi de neuf</string>
       <string id="UserMessaging_WhatsNew_Explain">Si cette stratégie est désactivée, l'icône Quoi de neuf et l'élément de menu ne seront pas affichés.
-        
+
 Si cette stratégie est activée ou non configurée, l'icône Quoi de neuf et l'élément de menu s'affichent.</string>
       <string id="UserMessaging_ExtensionRecommendations">Proposition d'Extension </string>
       <string id="UserMessaging_ExtensionRecommendations_Explain">Si cette politique est désactivée, les extensions ne seront pas proposées lorsque l'utilisateur visite des sites Web.
@@ -776,6 +864,14 @@ Si cette stratégie est activée ou non configurée, des actions seront recomman
       <string id="UserMessaging_SkipOnboarding_Explain">If this policy is enabled, onboarding messages will not be shown on the new tab page.
 
 If this policy is disabled or not configured, onboarding messages will be shown on the new tab page.</string>
+      <string id="UserMessaging_MoreFromMozilla">More from Mozilla</string>
+      <string id="UserMessaging_MoreFromMozilla_Explain">If this policy is disabled, the More from Mozilla section will not be shown in preferences.
+
+If this policy is enabled or not configured, the More from Mozilla section will be shown in preferences.</string>
+      <string id="UserMessaging_Locked">Do not allow user messaging preferences to be changed</string>
+      <string id="UserMessaging_Locked_Explain">If this policy is disabled, user messaging preferences can be changed by the user.
+
+If this policy is enabled or not configured, user messaging preferences cannot be changed by the user.</string>
       <string id="DisabledCiphers_TLS_DHE_RSA_WITH_AES_128_CBC_SHA">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</string>
       <string id="DisabledCiphers_TLS_DHE_RSA_WITH_AES_256_CBC_SHA">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</string>
       <string id="DisabledCiphers_TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</string>
@@ -787,6 +883,12 @@ If this policy is disabled or not configured, onboarding messages will be shown 
       <string id="DisabledCiphers_TLS_RSA_WITH_3DES_EDE_CBC_SHA">TLS_RSA_WITH_3DES_EDE_CBC_SHA</string>
       <string id="DisabledCiphers_TLS_RSA_WITH_AES_128_GCM_SHA256">TLS_RSA_WITH_AES_128_GCM_SHA256</string>
       <string id="DisabledCiphers_TLS_RSA_WITH_AES_256_GCM_SHA384">TLS_RSA_WITH_AES_256_GCM_SHA384</string>
+      <string id="DisabledCiphers_TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA</string>
+      <string id="DisabledCiphers_TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA</string>
+      <string id="DisabledCiphers_TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384">TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</string>
+      <string id="DisabledCiphers_TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256">TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</string>
+      <string id="DisabledCiphers_TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</string>
+      <string id="DisabledCiphers_TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256">TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</string>
       <string id="DisabledCiphers_Explain">If this policy is enabled, the corresponding cipher is disabled.
 
 If this policy is disabled, the corresponding cipher is enabled.
@@ -800,7 +902,7 @@ If this policy is enabled or not configured, encrypted media extensions (like Wi
       <string id="EncryptedMediaExtensions_Locked_Explain">If this policy is enabled and EncryptedMediaExtensions are disabled, Firefox will not download encrypted media extensions (like Widevine) or ask the user to install them.
 
 If this policy is not disabled or not configured, it has no effect.</string>
-      <string id="PDFjs_Enabled">Enable PDFjs</string>
+      <string id="PDFjs_Enabled">Enable PDF.js</string>
       <string id="PDFjs_Enabled_Explain">If this policy is disabled, the built-in PDF viewer is not used.
 
 If this policy is enabled or not configured, the built-in PDF viewer is used.</string>
@@ -822,12 +924,14 @@ If this policy is disabled or not configured,Picture-in-Picture settings can be 
 If this policy is disabled, users cannot create a primary password.
 
 If this policy is not configured, users can choose to create a primary password.</string>
+      <string id="HandlersOneLine">Handlers (JSON on one line)</string>
       <string id="Handlers">Handlers</string>
       <string id="Handlers_Explain">If this policy is enabled, you can use JSON to configure default application handlers.
 
 If this policy is disabled or not configured, Firefox defaults are used.
 
 For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#handlers.</string>
+      <string id="PreferencesOneLine">Préférences (JSON on one line)</string>
       <string id="Preferences">Préférences</string>
       <string id="Preferences_Explain">Note: In order to use this policy, you must clear all settings in the old Preferences (Deprecated) section.
 
@@ -836,6 +940,18 @@ If this policy is enabled, you can use JSON to configure preferences.
 If this policy is disabled or not configured, preferences are not modified.
 
 For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#preferences.</string>
+      <string id="BookmarksOneLine">Bookmarks (JSON on one line)</string>
+      <string id="Bookmarks">Bookmarks (JSON)</string>
+      <string id="Bookmarks_Explain">If this policy is enabled, you can use JSON to configure bookmarks, including [] to clear all bookmarks.
+
+If this policy is disabled or not configured, the individual bookmark policies are used.
+
+If this policy is enabled along with individual bookmarks, those bookmarks will not be added.
+
+This policy has no effect on Managed Bookmarks.
+
+For detailed information on the JSON, see https://github.com/mozilla/policy-templates/blob/master/README.md#bookmarks.</string>
+      <string id="ManagedBookmarksOneLine">Managed Bookmarks (JSON on one line)</string>
       <string id="ManagedBookmarks">Managed Bookmarks</string>
       <string id="ManagedBookmarks_Explain">If this policy is enabled, you can use JSON to configure managed bookmarks.
 
@@ -846,6 +962,129 @@ For detailed information on creating the policy, see https://github.com/mozilla/
       <string id="AllowedDomainsForApps_Explain">If this policy is enabled, users can only access Google Workspace for the specified domains (separated by a comma). To allow access to Gmail, you can add consumer_accounts.
 
 If this policy is disabled or not configured, users can access any account on Google Workspace as well as Gmail.</string>
+      <string id="BackgroundAppUpdate">Background updater</string>
+      <string id="BackgroundAppUpdate_Explain">If this policy disabled, the application will not try to install updates when the application is not running.
+
+If this policy is enabled or not configured, application updates may be installed (without user approval) in the background, even when the application is not running. The operating system might still require approval.</string>
+      <string id="AutoLaunchProtocolsFromOriginsOneLine">Auto Launch Protocols From Origins (JSON on one line)</string>
+      <string id="AutoLaunchProtocolsFromOrigins">Auto Launch Protocols From Origins</string>
+      <string id="AutoLaunchProtocolsFromOrigins_Explain">If this policy is enabled, you can define a list of external protocols that can be used from listed origins without prompting the user.
+
+If this policy is disabled or not configured, any site that invokes an external protocol will ask the user for permission.
+
+For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#autolaunchprotocolsfromorigins.</string>
+      <string id="WindowsSSO">Windows SSO</string>
+      <string id="WindowsSSO_Explain">If this policy is enabled, Firefox will use credentials stored in Windows to sign in to Microsoft, work, and school accounts.
+
+If this policy is disabled or not configured, credentials must be entered manually.</string>
+      <string id="UseSystemPrintDialog">Use System Print Dialog</string>
+      <string id="UseSystemPrintDialog_Explain">If this policy is enabled, Firefox will use the system print dialog instead of showing print preview before printing.
+
+If this policy is disabled or not configured, Firefox will show print preview before printing.</string>
+      <string id="ExemptDomainFileTypePairsFromFileTypeDownloadWarningsOneLine">Disable warnings based on file extension for specific file types on domains (JSON on one line)</string>
+      <string id="ExemptDomainFileTypePairsFromFileTypeDownloadWarnings">Disable warnings based on file extension for specific file types on domains</string>
+      <string id="ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Explain">If this policy is enabled, you can define a list of domains and file type extensions that will be exempt from executable warnings.
+
+If this policy is disabled or not configured, warnings are shown for all executable file types.
+
+For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#exemptdomainfiletypepairsfromfiletypedownloadwarnings.</string>
+      <string id="StartDownloadsInTempDirectory">Start Downloads in Temporary Directory</string>
+      <string id="StartDownloadsInTempDirectory_Explain">If this policy is enabled, Firefox will start downloads in a temporary directory and automatically deleted when you close the browser.
+
+If this policy is disabled or not configured, Firefox will to the download folder and will not be automatically deleted when you close the browser.</string>
+      <string id="GoToIntranetSiteForSingleWordEntryInAddressBar">Force direct intranet site navigation on single word entries in the address bar</string>
+      <string id="GoToIntranetSiteForSingleWordEntryInAddressBar_Explain">If this policy is enabled, typing single word entries in the address bar will attempt to navigate to intranet sites first, falling back to search if the DNS request fails.
+
+If this policy is disabled or not configured, typing single word entries in the address bar will search.</string>
+      <string id="AppUpdatePin">Pin updates to a specific version</string>
+      <string id="AppUpdatePin_Explain">If this policy is enabled, you can specify a Firefox version as xx. or xx.xx. and Firefox will not be updated beyond that major or minor version.
+
+If this policy is disabled or not configured, Firefox will update normally.</string>
+      <string id="Proxy_Locked">Do not allow proxy settings to be changed</string>
+      <string id="Proxy_Locked_Explain">If this policy is enabled, proxy settings cannot be changed by the user.
+
+If this policy is disabled or not configured, the user can change their proxy settings.</string>
+      <string id="Proxy_ConnectionType">Connection Type</string>
+      <string id="Proxy_ConnectionType_Explain">If this policy is enabled, you can set the connection type.
+
+If this policy is disabled or not configured, Firefox defaults to using the system proxy.</string>
+      <string id="Proxy_HTTPProxy">HTTP Proxy</string>
+      <string id="Proxy_HTTPProxy_Explain">If this policy is enabled, you can set the HTTP Proxy used when manual proxy configuration is specified.
+
+If this policy is disabled or not configured, Firefox does not use an HTTP Proxy.</string>
+      <string id="Proxy_UseHTTPProxyForAllProtocols">Use HTTP proxy for HTTPS</string>
+      <string id="Proxy_UseHTTPProxyForAllProtocols_Explain">If this policy is enabled, the HTTP Proxy is used for HTTPS when manual proxy configuration is specified.
+
+If this policy is disabled or not configured, Firefox does not use an HTTPS Proxy unless specified.</string>
+      <string id="Proxy_SSLProxy">HTTPS Proxy</string>
+      <string id="Proxy_SSLProxy_Explain">If this policy is enabled, you can set the HTTPS Proxy used when manual proxy configuration is specified.
+
+If this policy is disabled or not configured, Firefox does not use an HTTPS Proxy.</string>
+      <string id="Proxy_SOCKSProxy">SOCKS Host</string>
+      <string id="Proxy_SOCKSProxy_Explain">If this policy is enabled, you can set the SOCKS Host and version used when manual proxy configuration is specified.
+
+If this policy is disabled or not configured, Firefox does not use a SOCKS Host.</string>
+      <string id="Proxy_AutoConfigURL">Automatic proxy configuration URL</string>
+      <string id="Proxy_AutoConfigURL_Explain">If this policy is enabled, you can set the automatic proxy configuration URL.
+
+If this policy is disabled or not configured, Firefox does not use an automatic proxy configuration URL.</string>
+      <string id="Proxy_Passthrough">Proxy Passthrough</string>
+      <string id="Proxy_Passthrough_Explain">If this policy is enabled, the proxy settings are bypassed for the locations specified.
+
+If this policy is disabled or not configured, Firefox does not bypass the proxy.</string>
+      <string id="Proxy_AutoLogin">Do not prompt for authentication if password is saved</string>
+      <string id="Proxy_AutoLogin_Explain">If this policy is enabled, Firefox will not prompt for proxy authentication when a password is saved.
+
+If this policy is disabled or not configured, Firefox will always prompt for proxy authentication.</string>
+      <string id="Proxy_UseProxyForDNS">Proxy DNS when using SOCKS v5</string>
+      <string id="Proxy_UseProxyForDNS_Explain">If this policy is enabled, DNS is proxied when using SOCKS v5.
+
+If this policy is disabled or not configured, DNS is not proxied when using SOCKS v5.</string>
+      <string id="DisableThirdPartyModuleBlocking">Disable Third Party Module Blocking</string>
+      <string id="DisableThirdPartyModuleBlocking_Explain">If this policy is enabled, users are not allowed to block third-party modules from the about:third-party page.
+
+If this policy is disabled or not configured, users users are allowed to block third-party modules from the about:third-party page.</string>
+      <string id="ContainersOneLine">Containers (JSON on one line)</string>
+      <string id="Containers">Containers</string>
+      <string id="Containers_Explain">If this policy is enabled, you can use JSON to configure the default containers.
+
+If this policy is disabled or not configured, the built-in defaults are used.
+
+For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#containers.</string>
+      <string id="FirefoxSuggest_WebSuggestions">Suggestions from the web</string>
+      <string id="FirefoxSuggest_WebSuggestions_Explain">If this policy is enabled, you will get suggestions from Firefox related to your search.
+
+If this policy is disabled, you will not get these suggestions.
+
+If this policy is not configured, , you will get suggestions from Firefox related to your search.</string>
+      <string id="FirefoxSuggest_SponsoredSuggestions">Suggestions from sponsors</string>
+      <string id="FirefoxSuggest_SponsoredSuggestions_Explain">If this policy is enabled, you will support the development of Firefox with occasional sponsored suggestions.
+
+If this policy is disabled, you will not get these suggestions.
+
+If this policy is not configured, you will get occasional sponsored suggestions.</string>
+      <string id="FirefoxSuggest_ImproveSuggest">Improve the Firefox Suggest experience</string>
+      <string id="FirefoxSuggest_ImproveSuggest_Explain">If this policy is enabled, you will help create a richer search experience by allowing Mozilla to process your search queries.
+
+If this policy is disabled or not configured, you do not allow Mozilla to process your search queries.</string>
+      <string id="FirefoxSuggest_Locked">Do not allow preferences to be changed</string>
+      <string id="FirefoxSuggest_Locked_Explain">If this policy is enabled, Firefox Suggest preferences cannot be changed by the user.
+
+If this policy is disabled or not configured, the user can change their Firefox Suggest preferences.</string>
+      <string id="PrintingEnabled">Printing</string>
+      <string id="PrintingEnabled_Explain">If this policy is disabled, printing is disabled.
+
+If this policy is enabled or not configured, printing is enabled.</string>
+      <string id="ManualAppUpdateOnly">Manual Update Only</string>
+      <string id="ManualAppUpdateOnly_Explain">If this policy is enabled, users will not be prompted to install updates and Firefox will not check for updates in the background. The user must manually check and install updates from the About dialog.
+
+If this policy is disabled or not configured, the browser receives updates.
+
+This policy is not recommended for most users.</string>
+      <string id="AllowFileSelectionDialogs">Allow File Selection Dialogs</string>
+      <string id="AllowFileSelectionDialogs_Explain">If this policy is disabled, users will not be able to open file selection dialogs. In most cases, Firefox will act as if the user clicked the cancel button.
+
+If this policy is enabled or not configured, users can open file selection dialogs.</string>
       <string id="Preferences_Boolean_Explain">Si cette stratégie est activée, la préférence est verrouillée sur true. Si cette stratégie est désactivée, la préférence est verrouillée sur false.
 
 Pour une description de la préférence, voir:
@@ -954,6 +1193,12 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences</s
       <presentation id="Cookies_AcceptThirdParty">
         <dropdownList refId="Cookies_AcceptThirdParty"/>
       </presentation>
+      <presentation id="Cookies_Behavior">
+        <dropdownList refId="Cookies_Behavior"/>
+      </presentation>
+      <presentation id="Cookies_BehaviorPrivateBrowsing">
+        <dropdownList refId="Cookies_BehaviorPrivateBrowsing"/>
+      </presentation>
       <presentation id="SearchBar">
         <dropdownList refId="SearchBar"/>
       </presentation>
@@ -1029,6 +1274,9 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences</s
         <textBox refId="SearchEngine_PostData">
           <label>POST data:</label>
         </textBox>
+        <textBox refId="SearchEngine_Encoding">
+          <label>Encoding:</label>
+        </textBox>
       </presentation>
       <presentation id="SearchEngines_Default">
         <textBox refId="SearchEngines_Default">
@@ -1081,8 +1329,11 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences</s
         <checkBox refId="DNSOverHTTPSEnabled">Activer DNS sur HTTPS.</checkBox>
         <checkBox refId="DNSOverHTTPSLocked">Ne pas autoriser la modification des préférences DNS sur HTTPS.</checkBox>
       </presentation>
-      <presentation id="SSLVersion">
-        <dropdownList refId="SSLVersion"/>
+      <presentation id="SSLVersionMin">
+        <dropdownList refId="SSLVersion" defaultItem="2"/>
+      </presentation>
+      <presentation id="SSLVersionMax">
+        <dropdownList refId="SSLVersion" defaultItem="3"/>
       </presentation>
       <presentation id="SupportMenu">
         <text>Title:</text>
@@ -1109,6 +1360,9 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences</s
       <presentation id="Preferences_security_default_personal_cert">
         <dropdownList refId="Preferences_security_default_personal_cert"/>
       </presentation>
+      <presentation id="LegacySameSiteCookieBehaviorEnabledForDomainList">
+        <listBox refId="LegacySameSiteCookieBehaviorEnabledForDomainList"/>
+      </presentation>
       <presentation id="LocalFileLinks">
         <listBox refId="LocalFileLinks"/>
       </presentation>
@@ -1125,8 +1379,10 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences</s
       <presentation id="FirefoxHome">
         <checkBox refId="FirefoxHome_Search">Rechercher</checkBox>
         <checkBox refId="FirefoxHome_TopSites">Meilleurs sites</checkBox>
+        <checkBox refId="FirefoxHome_SponsoredTopSites">Sponsored Top Sites</checkBox>
         <checkBox refId="FirefoxHome_Highlights">Historique de téléchargement</checkBox>
         <checkBox refId="FirefoxHome_Pocket">Enregistré dans Pocket</checkBox>
+        <checkBox refId="FirefoxHome_SponsoredPocket">Sponsored Pocket Stories</checkBox>
         <checkBox refId="FirefoxHome_Snippets">Brèves</checkBox>
         <checkBox refId="FirefoxHome_Locked">Ne pas autoriser la modification des paramètres</checkBox>
       </presentation>
@@ -1138,6 +1394,9 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences</s
       </presentation>
       <presentation id="DisplayMenuBar">
         <dropdownList refId="DisplayMenuBar"/>
+      </presentation>
+      <presentation id="DisplayBookmarksToolbar">
+        <dropdownList refId="DisplayBookmarksToolbar"/>
       </presentation>
       <presentation id="String">
         <textBox refId="String">
@@ -1152,6 +1411,45 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences</s
       </presentation>
       <presentation id="JSON">
         <multiTextBox refId="JSON"/>
+      </presentation>
+      <presentation id="JSONOneLine">
+        <textBox refId="JSONOneLine">
+          <label/>
+        </textBox>
+      </presentation>
+      <presentation id="Proxy_ConnectionType">
+        <dropdownList refId="Proxy_ConnectionType"/>
+      </presentation>
+      <presentation id="Proxy_HTTPProxy">
+        <textBox refId="Proxy_HTTPProxy">
+          <label>Host including port:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Proxy_SSLProxy">
+        <textBox refId="Proxy_SSLProxy">
+          <label>Host including port:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Proxy_SOCKSProxy">
+        <text>Host including port:</text>
+        <textBox refId="Proxy_SOCKSProxy">
+          <label/>
+        </textBox>
+        <text>SOCKS Version:</text>
+        <dropdownList refId="Proxy_SOCKSVersion"/>
+      </presentation>
+      <presentation id="Proxy_AutoConfigURL">
+        <textBox refId="Proxy_AutoConfigURL">
+          <label>URL:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Proxy_Passthrough">
+        <text>No proxy for</text>
+        <textBox refId="Proxy_Passthrough">
+          <label/>
+        </textBox>
+        <text>Example: .mozilla.org, .net.nz, 192.168.1.0/24</text>
+        <text>Connections to localhost, 127.0.0.1/8, and ::1 are never proxied.</text>
       </presentation>
     </presentationTable>
   </resources>

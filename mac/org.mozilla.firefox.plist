@@ -8,6 +8,8 @@
 	<string>managedfirefox.com,example.com</string>
 	<key>AppAutoUpdate</key>
 	<true/>
+	<key>AppUpdatePin</key>
+	<string>106.</string>
 	<key>AppUpdateURL</key>
 	<string>https://www.example.com/update.xml</string>
 	<key>Authentication</key>
@@ -46,6 +48,17 @@
 		<key>Locked</key>
 		<true/>
 	</dict>
+	<key>AutoLaunchProtocolsFromOrigins</key>
+	<array>
+		<dict>
+			<key>protocol</key>
+			<string>zoommtg</string>
+			<key>allowed_origins</key>
+			<array>
+				<string>https://somesite.zoom.us</string>
+			</array>
+		</dict>
+	</array>
 	<key>BlockAboutAddons</key>
 	<true/>
 	<key>BlockAboutConfig</key>
@@ -93,6 +106,20 @@
 			<string>cert2.pem</string>
 		</array>
 	</dict>
+	<key>Default</key>
+	<dict>
+		<key>Containers</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>My container</string>
+				<key>icon</key>
+				<string>pet</string>
+				<key>color</key>
+				<string>turquoise</string>
+			</dict>
+		</array>
+	</dict>
 	<key>Cookies</key>
 	<dict>
 		<key>Allow</key>
@@ -107,14 +134,8 @@
 		<array>
 			<string>https://www.example.edu/</string>
 		</array>
-		<key>Default</key>
-		<false/>
-		<key>AcceptThirdParty</key>
-		<string>never</string>
-		<key>ExpireAtSessionEnd</key>
-		<true/>
-		<key>RejectTracker</key>
-		<true/>		
+		<key>Behavior</key>
+		<string>limit-foreign</string>
 		<key>Locked</key>
 		<true/>
 	</dict>
@@ -219,6 +240,8 @@
 		<true/>
 		<key>Fingerprinting</key>
 		<true/>
+		<key>EmailTracking</key>
+		<true/>
 		<key>Exceptions</key>
 		<array>
 			<string>https://example.com</string>
@@ -231,6 +254,17 @@
 		<key>Locked</key>
 		<false/>
 	</dict>
+	<key>ExemptDomainFileTypePairsFromFileTypeDownloadWarnings</key>
+	<array>
+		<dict>
+			<key>file_extension</key>
+			<string>jnlp</string>
+			<key>domains</key>
+			<array>
+				<string>example.com</string>
+			</array>
+		</dict>
+	</array>
 	<key>Extensions</key>
 	<dict>
 		<key>Install</key>
@@ -273,30 +307,32 @@
 		<true/>
 		<key>TopSites</key>
 		<true/>
+		<key>SponsoredTopSites</key>
+		<false/>
 		<key>Highlights</key>
 		<true/>
 		<key>Pocket</key>
+		<false/>
+		<key>SponsoredPocket</key>
 		<false/>
 		<key>Snippets</key>
 		<false/>
 		<key>Locked</key>
 		<true/>
 	</dict>
-	<key>FlashPlugin</key>
+	<key>FirefoxHome</key>
 	<dict>
-		<key>Allow</key>
-		<array>
-			<string>https://www.example.com</string>
-		</array>
-		<key>Block</key>
-		<array>
-			<string>https://www.example.org</string>
-		</array>
-		<key>Default</key>
+		<key>WebSuggestions</key>
 		<true/>
+		<key>SponsoredSuggestions</key>
+		<false/>
+		<key>ImproveSuggest</key>
+		<false/>
 		<key>Locked</key>
 		<true/>
 	</dict>
+	<key>GoToIntranetSiteForSingleWordEntryInAddressBar</key>
+	<true/>
 	<key>Handlers</key>
 	<dict>
 		<key>mimeTypes</key>
@@ -405,6 +441,11 @@
 		<key>EnablePermissions</key>
 		<false/>
 	</dict>
+	<key>PasswordManagerExceptions</key>
+	<array>
+		<string>https://example.org</string>
+		<string>https://example.edu</string>
+	</array>
 	<key>Permissions</key>
 	<dict>
 		<key>Camera</key>
@@ -541,14 +582,32 @@
 			<string>locked</string>
 		</dict>
 	</dict>
+	<key>PrintingEnabled</key>
+	<false/>
 	<key>Proxy</key>
 	<dict>
-		<key>SocksVersion</key>
-		<string>4</string>
 		<key>Mode</key>
 		<string>manual</string>
 		<key>HTTPProxy</key>
 		<string>proxy.example.com:80</string>
+		<key>UseHTTPProxyForAllProtocols</key>
+		<true/>
+		<key>SSLProxy</key>
+		<string>proxy.example.com:80</string>
+		<key>FTPProxy</key>
+		<string>proxy.example.com:80</string>
+		<key>SOCKSProxy</key>
+		<string>proxy.example.com:80</string>
+		<key>SocksVersion</key>
+		<string>4</string>
+		<key>Passthrough</key>
+		<string>&lt;local&rt;</string>
+		<key>AutoConfigURL</key>
+		<string>URL_TO_AUTOCONFIG</string>
+		<key>AutoLogin</key>
+		<true/>
+		<key>UseProxyForDNS</key>
+		<true/>
 		<key>Locked</key>
 		<true/>
 	</dict>
@@ -573,7 +632,13 @@
 		<false/>
 		<key>SkipOnboarding</key>
 		<true/>
+		<key>MoreFromMozilla</key>
+		<true/>
+		<key>Locked</key>
+		<true/>
 	</dict>
+	<key>UseSystemPrintDialog</key>
+	<true/>
 	<key>WebsiteFilter</key>
 	<dict>
 		<key>Block</key>
@@ -597,6 +662,8 @@
 	<string>tls1.2</string>
 	<key>SSLVersionMax</key>
 	<string>tls1.3</string>
+	<key>StartDownloadsInTempDirectory</key>
+	<true/>
 	<key>SupportMenu</key>
 	<dict>
 		<key>Title</key>
